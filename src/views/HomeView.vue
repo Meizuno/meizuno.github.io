@@ -111,7 +111,7 @@
           </svg>
         </a>
         <a
-          href="https://gitlab.com/Meizuno"
+          href="https://github.com/Meizuno"
           class="rounded-full bg-gray-800 p-4 flex items-center justify-center hover:bg-gray-700"
           target="_blank"
         >
