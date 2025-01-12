@@ -14,5 +14,5 @@ body::before {
     background-size: cover;
     background-position: center;
     z-index: -1;
-    background-image: url('@/assets/layout.webp');
+    background-image: url('@/assets/layout.jpg');
 }
