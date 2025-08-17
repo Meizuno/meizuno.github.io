@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as c}from"./H-0yuue8.js";const o={},s={class:"h-full bg-muted px-12 py-4"};function a(n,r){return c(),t("div",s," Cheat Sheet ")}const f=e(o,[["render",a]]);export{f as default};
