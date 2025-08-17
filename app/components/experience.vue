@@ -5,6 +5,7 @@
         <div class="flex gap-4">
           <ULink :to="item.link" target="_blank">
             <NuxtImg
+              preload
               :src="item.image"
               :alt="item.company"
               width="60"
@@ -21,10 +22,7 @@
           </div>
         </div>
         <div class="flex flex-col gap-8 ml-4">
-          <div
-            v-for="(role, index) in item.roles"
-            class="relative flex gap-2"
-          >
+          <div v-for="(role, index) in item.roles" class="relative flex gap-2">
             <USeparator
               v-if="index < item.roles.length - 1"
               orientation="vertical"

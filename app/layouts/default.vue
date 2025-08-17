@@ -4,7 +4,7 @@
       class="h-full grid grid-rows-[auto_1fr] gap-2 overflow-auto scrollbar-none"
     >
       <header
-        class="bg-muted h-fit p-4 rounded flex items-center justify-between"
+        class="bg-muted h-fit p-4 rounded flex items-center justify-between gap-4"
       >
         <User />
         <UNavigationMenu :items="items" size="lg" />

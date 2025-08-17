@@ -52,7 +52,7 @@
 
 <script setup lang="ts">
 const size = 60;
-const stroke = 6;
+const stroke = 5;
 
 const c = computed(() => size / 2);
 const r = computed(() => size / 2 - stroke / 2);

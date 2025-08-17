@@ -4,6 +4,7 @@
       <div class="flex gap-4">
         <ULink :to="item.link" target="_blank">
           <NuxtImg
+            preload
             :src="item.image"
             alt="institution"
             width="60"

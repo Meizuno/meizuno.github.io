@@ -6,7 +6,10 @@
         :key="index"
         class="flex gap-4 items-center"
       >
-        <UIcon name="i-material-symbols-check" class="size-7 text-primary" />
+        <UIcon
+          name="i-material-symbols-check"
+          class="size-7 min-w-7 min-h-7 text-primary"
+        />
         <span>{{ technology }}</span>
       </div>
     </div>

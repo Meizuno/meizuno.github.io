@@ -9,6 +9,7 @@
             class="h-fit py-1 bg-neutral-200 dark:bg-neutral-50"
           >
             <NuxtImg
+              preload
               :src="item.image"
               alt="Project"
               width="70"
@@ -28,7 +29,11 @@
           </div>
         </div>
         <div class="flex flex-col gap-8 ml-4">
-          <div v-for="(project, index) in item.list" :key="index" class="flex gap-2">
+          <div
+            v-for="(project, index) in item.list"
+            :key="index"
+            class="flex gap-2"
+          >
             <UIcon
               name="i-octicon-repo-16"
               class="size-5 min-h-5 min-w-5 text-muted mt-1.5"
