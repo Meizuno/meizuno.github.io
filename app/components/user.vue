@@ -4,7 +4,7 @@
       preload
       src="/photo.jpg"
       alt="Photo"
-      class="rounded-full w-24 h-24 md:w-32 md:h-32 lg:w-48 lg:h-48 object-cover"
+      class="rounded-full w-24 h-24 md:w-32 md:h-32 object-cover"
       sizes="100vw sm:200px md:300px lg:400px"
     />
     <div class="flex flex-col">
