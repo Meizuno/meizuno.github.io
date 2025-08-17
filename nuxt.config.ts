@@ -14,10 +14,4 @@ export default defineNuxtConfig({
       link: [{ rel: "icon", type: "image/svg", href: "/favicon.svg" }],
     },
   },
-
-  content: {
-    preview: {
-      api: 'https://meizuno.github.io/'
-    }
-  }
 });
