@@ -11,6 +11,26 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en",
       },
+      meta: [
+        {
+          name: "autor",
+          content: "Yurii Myronov",
+        },
+        {
+          name: "application-name",
+          content: "Yurii Myronov",
+        },
+        {
+          name: "description",
+          content:
+            "Porfolio of Yurii Myronov, a web developer specializing in Python and Nuxt.js.",
+        },
+        {
+          name: "keywords",
+          content:
+            "Yurii Myronov, Programmer, Web, Backend, Frontend, Python, Django, FastAPI, Nuxt.js, Vue.js, JavaScript, HTML, CSS, Tailwind, Portfolio",
+        },
+      ],
       link: [{ rel: "icon", type: "image/svg", href: "/favicon.svg" }],
     },
   },
