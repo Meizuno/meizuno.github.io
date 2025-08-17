@@ -30,6 +30,10 @@ export default defineNuxtConfig({
           content:
             "Yurii Myronov, Programmer, Web, Backend, Frontend, Python, Django, FastAPI, Nuxt.js, Vue.js, JavaScript, HTML, CSS, Tailwind, Portfolio",
         },
+        {
+          name: "google-site-verification",
+          content: "OOxjPjUxN8-_Lutvr3YU_SpccgnG88yizggIkmeGP5A",
+        }
       ],
       link: [{ rel: "icon", type: "image/svg", href: "/favicon.svg" }],
     },
