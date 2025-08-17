@@ -7,51 +7,17 @@
             <span class="font-semibold">{{ skill.label }}</span>
             <UIcon name="i-heroicons-outline-external-link" class="size-3" />
           </ULink>
-          <span class="text-xs">{{ skill.value / 10 }}/{{ 100/10 }}</span>
+          <span class="text-xs">{{ skill.value }}/{{ skill.max || 10 }}</span>
         </div>
-        <UProgress v-model="skill.value" />
+        <UProgress v-model="skill.value" :max="skill.max || 10" />
       </div>
     </div>
   </Block>
 </template>
 
 <script setup lang="ts">
-const skills = ref([
-  {
-    label: "Git",
-    value: 90,
-    to: "https://git-scm.com/",
-    description: "GitHub, GitLab",
-  },
-  {
-    label: "Python",
-    value: 95,
-    to: "https://www.python.org/",
-    description: "Django, FastAPI",
-  },
-  {
-    label: "Nuxt",
-    value: 80,
-    to: "https://nuxt.com/",
-    description: "Nuxt UI",
-  },
-  {
-    label: "Docker",
-    value: 90,
-    to: "https://www.docker.com/",
-    description: "Docker Compose",
-  },
-  {
-    label: "Capacitor",
-    value: 70,
-    to: "https://capacitorjs.com/",
-    description: "IOS, Android",
-  },
-  {
-    label: "Tauri",
-    value: 60,
-    to: "https://v2.tauri.app/",
-    description: "IOS, Android, Windows",
-  },
-]);
+const { data: skills } = await useAsyncData("skills", async () => {
+  const data = await queryCollection("home").select("skills").first();
+  return data?.skills ?? [];
+});
 </script>

@@ -1,42 +1,39 @@
 <template>
-  <Block title="Education">
-    <div class="flex flex-col gap-4">
+  <Block v-if="items" title="Education">
+    <div v-for="item in items" class="flex flex-col gap-4">
       <div class="flex gap-4">
-        <ULink to="https://www.vut.cz/" target="_blank">
+        <ULink :to="item.link" target="_blank">
           <NuxtImg
-            src="/images/vut.jpg"
-            alt="VUT"
+            :src="item.image"
+            alt="institution"
             width="60"
             height="60"
             class="h-fit"
           />
         </ULink>
         <div class="flex flex-col text-sm">
-          <h4 class="text-xl font-semibold">
-            Brno University of Technology (Incomplete)
-          </h4>
-          <span>Faculty of Information Technology</span>
-          <span class="text-muted">Sep 2020 - Aug 2024</span>
-        </div>
-      </div>
-      <div class="flex gap-4">
-        <ULink to="https://kntu.net.ua/" target="_blank">
-          <NuxtImg
-            src="/images/kntu.jpeg"
-            alt="KNTU"
-            width="60"
-            height="60"
-            class="h-fit"
-          />
-        </ULink>
-        <div class="flex flex-col text-sm">
-          <h4 class="text-xl font-semibold">
-            Kherson National Technical University
-          </h4>
-          <span>Bachelor of Technology - BTech</span>
-          <span class="text-muted">Sep 2017 - Jun 2021</span>
+          <h4 class="text-xl font-semibold">{{ item.institution }}</h4>
+          <span>{{ item.degree }}</span>
+          <span class="text-muted">
+            {{ item.startFormatted }} - {{ item.endFormatted }}
+          </span>
         </div>
       </div>
     </div>
   </Block>
 </template>
+
+<script setup lang="ts">
+const { data: educations } = await useAsyncData("education", async () => {
+  const data = await queryCollection("home").select("education").first();
+  return data?.education ?? [];
+});
+
+const items = computed(() =>
+  educations.value?.map((education) => ({
+    ...education,
+    startFormatted: formatDate(education.start),
+    endFormatted: formatDate(education.end),
+  }))
+);
+</script>

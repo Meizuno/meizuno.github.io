@@ -58,18 +58,8 @@ const c = computed(() => size / 2);
 const r = computed(() => size / 2 - stroke / 2);
 const circ = computed(() => 2 * Math.PI * r.value);
 
-const languages = ref([
-  {
-    label: "Ukrainian",
-    value: 100,
-  },
-  {
-    label: "English",
-    value: 70,
-  },
-  {
-    label: "Czech",
-    value: 80,
-  },
-]);
+const { data: languages } = await useAsyncData("languages", async () => {
+  const data = await queryCollection("home").select("languages").first();
+  return data?.languages ?? [];
+});
 </script>

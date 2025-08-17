@@ -14,7 +14,7 @@
       </div>
       <div class="h-fit grid grid-cols-2 gap-12">
         <div class="flex flex-col justify-between gap-8">
-          <Work />
+          <Experience />
           <Education />
         </div>
         <div>

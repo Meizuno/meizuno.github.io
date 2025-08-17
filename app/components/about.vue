@@ -1,11 +1,14 @@
 <template>
-  <Block title="About me">
+  <Block v-if="about" title="About me">
     <div class="font-semibold">
-      I am a full-stack web developer with experience in backend (Python,
-      Django, FastAPI) and frontend (Vue.js, Nuxt). I enjoy building reliable
-      and user-friendly applications — from backend architecture to intuitive
-      interfaces. Always eager to learn new technologies, I focus on teamwork,
-      clean code, and creating projects that deliver real value to users.
+      {{ about }}
     </div>
   </Block>
 </template>
+
+<script setup lang="ts">
+const { data: about } = await useAsyncData("about", async () => {
+  const data = await queryCollection("home").select("about").first();
+  return data?.about ?? "";
+});
+</script>

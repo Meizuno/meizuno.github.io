@@ -14,12 +14,8 @@
 </template>
 
 <script setup lang="ts">
-const technologies = ref([
-  "GitHub/GitLab (CI/CD, Actions)",
-  "Django, FastAPI",
-  "Javascript / Typescript",
-  "Nuxt UI (Vue, Tailwind)",
-  "Docker (Network, Compose, Volumes)",
-  "Tauri (IOS, Android, Windows)",
-]);
+const { data: technologies } = await useAsyncData("technologies", async () => {
+  const data = await queryCollection("home").select("technologies").first();
+  return data?.technologies ?? [];
+});
 </script>

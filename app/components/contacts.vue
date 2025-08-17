@@ -17,18 +17,8 @@
 </template>
 
 <script setup lang="ts">
-const contacts = ref([
-  {
-    icon: "i-mdi-github",
-    to: "https://github.com/Meizuno",
-  },
-  {
-    icon: "i-mdi-linkedin",
-    to: "https://www.linkedin.com/in/yurii-myronov-694b99249/",
-  },
-  {
-    icon: "i-material-symbols-mail",
-    to: "mailto:yuramiron16@gmail.com",
-  },
-]);
+const { data: contacts } = await useAsyncData("contact", async () => {
+  const data = await queryCollection("home").select("contact").first();
+  return data?.contact ?? [];
+});
 </script>
