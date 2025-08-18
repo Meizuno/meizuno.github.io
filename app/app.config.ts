@@ -44,6 +44,31 @@ export default defineAppConfig({
         linkLeadingIcon: "shrink-0 size-8",
         link: "flex-col gap-1 md:gap-2 md:flex-row",
       },
+      compoundVariants: [
+        {
+          disabled: false,
+          active: false,
+          variant: 'pill',
+          class: {
+            link: [
+              'hover:text-highlighted hover:before:bg-elevated/0',
+              'transition-colors before:transition-colors'
+            ],
+            linkLeadingIcon: [
+              'group-hover:text-default',
+              'transition-colors'
+            ]
+          }
+        },
+        {
+          variant: 'pill',
+          active: true,
+          highlight: false,
+          class: {
+            link: 'before:bg-elevated/0'
+          }
+        },
+      ],
     },
   },
 });

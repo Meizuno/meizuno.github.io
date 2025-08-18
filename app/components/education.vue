@@ -7,9 +7,7 @@
             preload
             :src="item.image"
             alt="institution"
-            width="60"
-            height="60"
-            class="h-fit"
+            class="w-12 h-12 min-w-12 mix-h-12 object-cover"
           />
         </ULink>
         <div class="flex flex-col text-sm">

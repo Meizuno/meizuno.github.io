@@ -7,9 +7,7 @@
             preload
             :src="app.image"
             :alt="app.title"
-            width="50"
-            height="50"
-            class="h-fit"
+            class="w-12 h-12 min-w-12 mix-h-12 object-cover"
           />
         </ULink>
         <div class="flex flex-col text-sm">

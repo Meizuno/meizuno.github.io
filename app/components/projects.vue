@@ -6,14 +6,13 @@
           <ULink
             :to="item.link"
             target="_blank"
-            class="h-fit py-1 bg-neutral-200 dark:bg-neutral-50"
+            class="h-fit py-1 dark:bg-neutral-50"
           >
             <NuxtImg
               preload
               :src="item.image"
               alt="Project"
-              width="70"
-              height="50"
+              class="w-16 h-12 min-w-16 mix-h-12 object-cover"
             />
           </ULink>
           <div class="flex flex-col text-sm">
@@ -36,7 +35,7 @@
           >
             <UIcon
               name="i-octicon-repo-16"
-              class="size-5 min-h-5 min-w-5 text-muted mt-1.5"
+              class="size-7 min-h-7 min-w-7 text-muted mt-1.5"
             />
             <div class="flex flex-col text-sm">
               <ULink

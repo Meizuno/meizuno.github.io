@@ -1,6 +1,6 @@
 <template>
   <Block v-if="about" title="About me">
-    <div class="font-semibold">
+    <div class="font-semibold text-justify">
       {{ about }}
     </div>
   </Block>

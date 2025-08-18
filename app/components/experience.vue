@@ -8,9 +8,7 @@
               preload
               :src="item.image"
               :alt="item.company"
-              width="60"
-              height="60"
-              class="h-fit"
+              class="w-16 h-16 min-w-16 mix-h-16 object-cover"
             />
           </ULink>
           <div class="flex flex-col text-sm">
