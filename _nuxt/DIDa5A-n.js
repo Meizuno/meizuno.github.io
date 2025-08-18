@@ -1,0 +1,1 @@
+import{_ as e,d as t,e as c}from"./Cjny-M79.js";const s={},o={class:"h-full bg-muted px-12 py-4"};function a(n,r){return c(),t("div",o," Cheat Sheet ")}const d=e(s,[["render",a]]);export{d as default};
