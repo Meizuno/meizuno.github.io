@@ -31,8 +31,14 @@
           <div
             v-for="(project, index) in item.list"
             :key="index"
-            class="flex gap-2"
+            class="relative flex gap-2"
           >
+            <USeparator
+              v-if="index < item.list.length - 1"
+              orientation="vertical"
+              size="sm"
+              class="absolute left-3 top-11 h-3/4 my-auto"
+            />
             <UIcon
               name="i-octicon-repo-16"
               class="size-7 min-h-7 min-w-7 text-muted mt-1.5"

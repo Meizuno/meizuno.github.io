@@ -1,6 +1,8 @@
 <template>
-  <div class="h-full grid md:grid-cols-[1fr_2fr] lg:grid-cols-[1fr_2fr] gap-2">
-    <div class="bg-muted py-2 px-4 lg:px-6 rounded flex flex-col gap-8 justify-between">
+  <div class="h-full grid md:grid-cols-[1fr_2fr] lg:grid-cols-[2fr_5fr] gap-2">
+    <div
+      class="bg-muted py-2 px-4 lg:px-6 rounded flex flex-col gap-8 justify-between"
+    >
       <Skills />
       <Technologies />
       <Languages />
