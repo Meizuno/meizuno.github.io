@@ -42,7 +42,12 @@ export default defineNuxtConfig({
   ignore: ["scripts"],
   content: {
     preview: {
-      api: 'https://meizuno.github.io/'
-    }
-  }
+      api: "https://meizuno.github.io/",
+    },
+  },
+
+  site: {
+    url: "https://meizuno.github.io",
+    name: "Meizuno Portfolio",
+  },
 });
