@@ -1,198 +1,198 @@
 {
-    "skills": [
+  "skills": [
+    {
+      "label": "Git",
+      "value": 9,
+      "max": 10,
+      "to": "https://git-scm.com/",
+      "description": "GitHub, GitLab"
+    },
+    {
+      "label": "Python",
+      "value": 9.5,
+      "max": 10,
+      "to": "https://www.python.org/",
+      "description": "Django, FastAPI"
+    },
+    {
+      "label": "Nuxt",
+      "value": 8,
+      "max": 10,
+      "to": "https://nuxt.com/",
+      "description": "Nuxt UI"
+    },
+    {
+      "label": "Docker",
+      "value": 9,
+      "max": 10,
+      "to": "https://www.docker.com/",
+      "description": "Docker Compose"
+    },
+    {
+      "label": "Capacitor",
+      "value": 7,
+      "to": "https://capacitorjs.com/",
+      "description": "IOS, Android"
+    },
+    {
+      "label": "Tauri",
+      "value": 6,
+      "max": 10,
+      "to": "https://v2.tauri.app/",
+      "description": "IOS, Android, Windows"
+    }
+  ],
+  "technologies": [
+    "GitHub/GitLab (CI/CD, Actions)",
+    "Django, FastAPI",
+    "Javascript / Typescript",
+    "Nuxt UI (Vue, Tailwind)",
+    "Docker (Network, Compose, Volumes)",
+    "Tauri (IOS, Android, Windows)"
+  ],
+  "languages": [
+    {
+      "label": "Ukrainian",
+      "value": 100
+    },
+    {
+      "label": "English",
+      "value": 70
+    },
+    {
+      "label": "Czech",
+      "value": 80
+    }
+  ],
+  "contact": [
+    {
+      "icon": "i-mdi-github",
+      "to": "https://github.com/Meizuno"
+    },
+    {
+      "icon": "i-mdi-linkedin",
+      "to": "https://www.linkedin.com/in/yurii-myronov-694b99249/"
+    },
+    {
+      "icon": "i-material-symbols-mail",
+      "to": "mailto:yuramiron16@gmail.com"
+    }
+  ],
+  "about": "I am a full-stack web developer with experience in backend (Python, Django, FastAPI) and frontend (Vue.js, Nuxt). I enjoy building reliable and user-friendly applications — from backend architecture to intuitive interfaces. Always eager to learn new technologies, I focus on teamwork and creating projects that deliver real value to users.",
+  "experience": [
+    {
+      "company": "Dlubal Software",
+      "location": "Prague, Czechia",
+      "link": "https://www.dlubal.com",
+      "image": "/images/dlubal.jpeg",
+      "format": "Full-time",
+      "start": "2023-07",
+      "end": null,
+      "roles": [
         {
-            "label": "Git",
-            "value": 9,
-            "max": 10,
-            "to": "https://git-scm.com/",
-            "description": "GitHub, GitLab"
+          "title": "Lead Programmer",
+          "start": "2025-01",
+          "end": null,
+          "format": "Hybrid"
         },
         {
-            "label": "Python",
-            "value": 9.5,
-            "max": 10,
-            "to": "https://www.python.org/",
-            "description": "Django, FastAPI"
-        },
-        {
-            "label": "Nuxt",
-            "value": 8,
-            "max": 10,
-            "to": "https://nuxt.com/",
-            "description": "Nuxt UI"
-        },
-        {
-            "label": "Docker",
-            "value": 9,
-            "max": 10,
-            "to": "https://www.docker.com/",
-            "description": "Docker Compose"
-        },
-        {
-            "label": "Capacitor",
-            "value": 7,
-            "to": "https://capacitorjs.com/",
-            "description": "IOS, Android"
-        },
-        {
-            "label": "Tauri",
-            "value": 6,
-            "max": 10,
-            "to": "https://v2.tauri.app/",
-            "description": "IOS, Android, Windows"
+          "title": "Backend Developer",
+          "start": "2023-07",
+          "end": "2025-01",
+          "format": "On-site"
         }
-    ],
-    "technologies": [
-        "GitHub/GitLab (CI/CD, Actions)",
-        "Django, FastAPI",
-        "Javascript / Typescript",
-        "Nuxt UI (Vue, Tailwind)",
-        "Docker (Network, Compose, Volumes)",
-        "Tauri (IOS, Android, Windows)"
-    ],
-    "languages": [
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Brno University of Technology (Incomplete)",
+      "degree": "Faculty of Information Technology",
+      "link": "https://www.vut.cz/",
+      "image": "/images/vut.jpg",
+      "start": "2020-09",
+      "end": "2024-08"
+    },
+    {
+      "institution": "Kherson National Technical University",
+      "degree": "Bachelor of Technology - BTech",
+      "link": "https://kntu.net.ua/",
+      "image": "/images/kntu.jpeg",
+      "start": "2017-09",
+      "end": "2021-06"
+    }
+  ],
+  "project": [
+    {
+      "title": "Meizuno",
+      "link": "https://github.com/",
+      "image": "/images/github.webp",
+      "accountLink": "https://github.com/Meizuno",
+      "start": "2018-12",
+      "end": null,
+      "info": "Repositories: 14",
+      "list": [
         {
-            "label": "Ukrainian",
-            "value": 100
+          "title": "Text Book",
+          "technologies": "Nuxt, Tauri",
+          "description": "Mobile application for notes, supports Markdown",
+          "to": "https://github.com/Meizuno/TextBook"
         },
         {
-            "label": "English",
-            "value": 70
+          "title": "Authenticator",
+          "technologies": "Nuxt, Capacitor",
+          "description": "Generating OTPs (One-Time Passwords) and managing 2FA (Two-Factor Authentication)",
+          "to": "https://github.com/Meizuno/Authenticator"
         },
         {
-            "label": "Czech",
-            "value": 80
+          "title": "Andrii",
+          "technologies": "Nuxt, Nuxt Content",
+          "description": "Client project using Nuxt Content",
+          "to": "https://github.com/Meizuno/Andrii"
+        },
+        {
+          "title": "Tic-Tak-Toe",
+          "technologies": "Python",
+          "description": "Game with GUI on Python with 'pygame' package",
+          "to": "https://github.com/Meizuno/TicTakToe"
+        },
+        {
+          "title": "Online Market",
+          "technologies": "Python, Django",
+          "description": "Web-market on framework Django",
+          "to": "https://github.com/Meizuno/online-market"
         }
-    ],
-    "contact": [
-        {
-            "icon": "i-mdi-github",
-            "to": "https://github.com/Meizuno"
-        },
-        {
-            "icon": "i-mdi-linkedin",
-            "to": "https://www.linkedin.com/in/yurii-myronov-694b99249/"
-        },
-        {
-            "icon": "i-material-symbols-mail",
-            "to": "mailto:yuramiron16@gmail.com"
-        }
-    ],
-    "about": "I am a full-stack web developer with experience in backend (Python, Django, FastAPI) and frontend (Vue.js, Nuxt). I enjoy building reliable and user-friendly applications — from backend architecture to intuitive interfaces. Always eager to learn new technologies, I focus on teamwork, clean code, and creating projects that deliver real value to users.",
-    "experience": [
-        {
-            "company": "Dlubal Software",
-            "location": "Prague, Czechia",
-            "link": "https://www.dlubal.com",
-            "image": "/images/dlubal.jpeg",
-            "format": "Full-time",
-            "start": "2023-07",
-            "end": null,
-            "roles": [
-                {
-                    "title": "Lead Programmer",
-                    "start": "2025-01",
-                    "end": null,
-                    "format": "Hybrid"
-                },
-                {
-                    "title": "Backend Developer",
-                    "start": "2023-07",
-                    "end": "2025-01",
-                    "format": "On-site"
-                }
-            ]
-        }
-    ],
-    "education": [
-        {
-            "institution": "Brno University of Technology (Incomplete)",
-            "degree": "Faculty of Information Technology",
-            "link": "https://www.vut.cz/",
-            "image": "/images/vut.jpg",
-            "start": "2020-09",
-            "end": "2024-08"
-        },
-        {
-            "institution": "Kherson National Technical University",
-            "degree": "Bachelor of Technology - BTech",
-            "link": "https://kntu.net.ua/",
-            "image": "/images/kntu.jpeg",
-            "start": "2017-09",
-            "end": "2021-06"
-        }
-    ],
-    "project": [
-        {
-            "title": "Meizuno",
-            "link": "https://github.com/",
-            "image": "/images/github.webp",
-            "accountLink": "https://github.com/Meizuno",
-            "start": "2018-12",
-            "end": null,
-            "info": "Repositories: 14",
-            "list": [
-                {
-                    "title": "Text Book",
-                    "technologies": "Nuxt, Tauri",
-                    "description": "Mobile application for notes, supports Markdown",
-                    "to": "https://github.com/Meizuno/TextBook"
-                },
-                {
-                    "title": "Authenticator",
-                    "technologies": "Nuxt, Capacitor",
-                    "description": "Generating OTPs (One-Time Passwords) and managing 2FA (Two-Factor Authentication)",
-                    "to": "https://github.com/Meizuno/Authenticator"
-                },
-                {
-                    "title": "Andrii",
-                    "technologies": "Nuxt, Nuxt Content",
-                    "description": "Client project using Nuxt Content",
-                    "to": "https://github.com/Meizuno/Andrii"
-                },
-                {
-                    "title": "Tic-Tak-Toe",
-                    "technologies": "Python",
-                    "description": "Game with GUI on Python with 'pygame' package",
-                    "to": "https://github.com/Meizuno/TicTakToe"
-                },
-                {
-                    "title": "Online Market",
-                    "technologies": "Python, Django",
-                    "description": "Web-market on framework Django",
-                    "to": "https://github.com/Meizuno/online-market"
-                }
-            ]
-        }
-    ],
-    "application": [
-        {
-            "title": "Andrii Hlushchenko",
-            "image": "/images/andrii.webp",
-            "description": "Car rental at great prices",
-            "url": "https://andrii.devhost.uk/",
-            "tag": "Web"
-        },
-        {
-            "title": "Storage Disk",
-            "image": "/images/disk.webp",
-            "description": "Storage for my files",
-            "url": "https://disk.devhost.uk/",
-            "tag": "Web"
-        },
-        {
-            "title": "Text Book",
-            "image": "/images/text-book.png",
-            "description": "Mobile application for notes, supports Markdown",
-            "url": "https://apps.apple.com/cz/app/text-book-personal-notes/id6740556982",
-            "tag": "IOS"
-        },
-        {
-            "title": "OTP Genie",
-            "image": "/images/otp-genie.png",
-            "description": "Storage for my files",
-            "url": "https://apps.apple.com/cz/app/otp-genie/id6748459774",
-            "tag": "IOS"
-        }
-    ]
+      ]
+    }
+  ],
+  "application": [
+    {
+      "title": "Andrii Hlushchenko",
+      "image": "/images/andrii.webp",
+      "description": "Car rental at great prices",
+      "url": "https://andrii.devhost.uk/",
+      "tag": "Web"
+    },
+    {
+      "title": "Storage Disk",
+      "image": "/images/disk.webp",
+      "description": "Storage for my files",
+      "url": "https://disk.devhost.uk/",
+      "tag": "Web"
+    },
+    {
+      "title": "Text Book",
+      "image": "/images/text-book.png",
+      "description": "Mobile application for notes, supports Markdown",
+      "url": "https://apps.apple.com/cz/app/text-book-personal-notes/id6740556982",
+      "tag": "IOS"
+    },
+    {
+      "title": "OTP Genie",
+      "image": "/images/otp-genie.png",
+      "description": "Storage for my files",
+      "url": "https://apps.apple.com/cz/app/otp-genie/id6748459774",
+      "tag": "IOS"
+    }
+  ]
 }
