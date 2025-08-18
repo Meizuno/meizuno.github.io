@@ -9,7 +9,7 @@
       <Contacts />
     </div>
     <div
-      class="h-full bg-muted rounded px-6 lg:px-12 py-4 flex flex-col gap-12 justify-between"
+      class="h-full bg-muted rounded px-6 lg:px-12 py-4 flex flex-col gap-6 justify-between"
     >
       <div>
         <About />
