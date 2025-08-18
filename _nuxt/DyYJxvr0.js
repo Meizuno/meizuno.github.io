@@ -1,0 +1,1 @@
+import{_ as o,d as s,e as r,G as n}from"./DDFLltAo.js";const t={};function c(e,a){return r(),s("code",null,[n(e.$slots,"default")])}const d=Object.assign(o(t,[["render",c]]),{__name:"ProseCode"});export{d as default};
