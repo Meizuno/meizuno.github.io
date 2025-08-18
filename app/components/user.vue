@@ -2,7 +2,7 @@
   <div class="flex items-center gap-4">
     <NuxtImg
       preload
-      src="/photo.jpg"
+      src="/photo.webp"
       alt="Photo"
       class="rounded-full w-16 h-16 md:w-24 md:h-24 object-cover"
     />
