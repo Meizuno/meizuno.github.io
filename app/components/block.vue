@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col gap-4">
     <div>
-      <h3 class="text-xl font-semibold my-2">{{ title }}</h3>
+      <h3 class="text-2xl font-semibold my-2">{{ title }}</h3>
       <USeparator />
     </div>
     <slot />

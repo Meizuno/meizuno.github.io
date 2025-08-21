@@ -1,4 +1,5 @@
 import { defineCollection, defineContentConfig, z } from "@nuxt/content";
+import { de } from "@nuxt/ui/runtime/locale/index.js";
 
 export default defineContentConfig({
   collections: {
@@ -83,6 +84,27 @@ export default defineContentConfig({
             description: z.string(),
             url: z.string().url(),
             tag: z.string(),
+          })
+        ),
+      }),
+    }),
+    cheatSheet: defineCollection({
+      type: "data",
+      source: "cheat-sheet/**.json",
+      schema: z.object({
+        title: z.string(),
+        reference: z.string(),
+        content: z.array(
+          z.object({
+            title: z.string(),
+            reference: z.string(),
+            content: z.array(
+              z.object({
+                command: z.string(),
+                description: z.string(),
+                syntax: z.string().optional(),
+              })
+            ),
           })
         ),
       }),

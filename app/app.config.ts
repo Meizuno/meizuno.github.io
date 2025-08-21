@@ -39,11 +39,6 @@ export default defineAppConfig({
       },
     },
     navigationMenu: {
-      slots: {
-        linkLabel: "hidden sm:block truncate md:text-xl",
-        linkLeadingIcon: "shrink-0 size-8",
-        link: "flex-col gap-1 md:gap-2 md:flex-row",
-      },
       compoundVariants: [
         {
           disabled: false,
@@ -70,5 +65,10 @@ export default defineAppConfig({
         },
       ],
     },
+    tooltip: {
+      slots: {
+        content: "bg-muted px-3 py-1.5",
+      }
+    }
   },
 });
