@@ -1,7 +1,7 @@
 <template>
-  <UContainer class="h-dvh py-2 overflow-hidden">
+  <UContainer class="h-dvh py-2">
     <div
-      class="h-full grid grid-rows-[auto_1fr] gap-2 overflow-auto scrollbar-none"
+      class="h-full grid grid-rows-[auto_1fr] gap-2"
     >
       <header
         class="bg-muted h-fit p-4 rounded flex items-center justify-between gap-4"
