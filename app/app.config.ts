@@ -43,32 +43,36 @@ export default defineAppConfig({
         {
           disabled: false,
           active: false,
-          variant: 'pill',
+          variant: "pill",
           class: {
             link: [
-              'hover:text-highlighted hover:before:bg-elevated/0',
-              'transition-colors before:transition-colors'
+              "hover:text-highlighted hover:before:bg-elevated/0",
+              "transition-colors before:transition-colors",
             ],
-            linkLeadingIcon: [
-              'group-hover:text-default',
-              'transition-colors'
-            ]
-          }
+            linkLeadingIcon: ["group-hover:text-default", "transition-colors"],
+          },
         },
         {
-          variant: 'pill',
+          variant: "pill",
           active: true,
           highlight: false,
           class: {
-            link: 'before:bg-elevated/0'
-          }
+            link: "before:bg-elevated/0",
+          },
+        },
+        {
+          orientation: "vertical",
+          collapsed: false,
+          class: {
+            childList: "border-muted",
+          },
         },
       ],
     },
     tooltip: {
       slots: {
         content: "bg-muted px-3 py-1.5",
-      }
-    }
+      },
+    },
   },
 });
