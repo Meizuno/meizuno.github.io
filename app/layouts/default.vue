@@ -17,16 +17,18 @@
         <UButton
           icon="i-lucide-download"
           color="neutral"
-          variant="soft"
+          variant="ghost"
           size="xl"
           @click="console.log('Download CV')"
+          class="hover:bg-default"
         />
         <ClientOnly v-if="!colorMode?.forced">
           <UButton
             :icon="isDark ? 'i-lucide-sun' : 'i-lucide-moon'"
             color="neutral"
-            variant="soft"
+            variant="ghost"
             size="xl"
+            class="hover:bg-default"
             @click="isDark = !isDark"
           />
 

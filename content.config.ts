@@ -3,6 +3,17 @@ import { de } from "@nuxt/ui/runtime/locale/index.js";
 
 export default defineContentConfig({
   collections: {
+    user: defineCollection({
+      type: "data",
+      source: "user.json",
+      schema: z.object({
+        title: z.string(),
+        role: z.string(),
+        company: z.string(),
+        companyUrl: z.string().url(),
+        image: z.string().url(),
+      }),
+    }),
     home: defineCollection({
       type: "data",
       source: "home.json",
