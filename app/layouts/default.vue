@@ -1,11 +1,11 @@
 <template>
   <UContainer class="py-2 flex flex-col gap-2">
     <header
-      class="bg-muted p-4 rounded grid grid-rows-[auto_auto_auto] md:grid-rows-1 md:grid-cols-[3fr_2fr] lg:grid-cols-[1fr_1fr] items-center gap-4"
+      class="bg-muted p-4 rounded flex flex-col md:flex-row justify-between gap-4"
     >
-      <User />
+      <User class="flex-1"/>
       <USeparator class="block md:hidden" />
-      <div class="flex justify-between items-center">
+      <div class="flex-1 flex justify-between items-center">
         <UNavigationMenu
           :items="items"
           size="lg"
