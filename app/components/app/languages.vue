@@ -1,5 +1,5 @@
 <template>
-  <Block title="Languages">
+  <AppBlock title="Languages">
     <div class="flex justify-around">
       <div
         v-for="(lang, index) in languages"
@@ -47,7 +47,7 @@
         <span>{{ lang.label }}</span>
       </div>
     </div>
-  </Block>
+  </AppBlock>
 </template>
 
 <script setup lang="ts">

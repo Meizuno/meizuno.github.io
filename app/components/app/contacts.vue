@@ -1,5 +1,5 @@
 <template>
-  <Block title="Contacts">
+  <AppBlock title="Contacts">
     <div class="grid grid-cols-3 gap-2">
       <UButton
         v-for="(contact, index) in contacts"
@@ -13,7 +13,7 @@
         <UIcon :name="contact.icon" class="size-8" />
       </UButton>
     </div>
-  </Block>
+  </AppBlock>
 </template>
 
 <script setup lang="ts">

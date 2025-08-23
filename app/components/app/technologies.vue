@@ -1,5 +1,5 @@
 <template>
-  <Block title="Technologies">
+  <AppBlock title="Technologies">
     <div class="flex flex-col gap-4 text-muted font-semibold">
       <div
         v-for="(technology, index) in technologies"
@@ -13,7 +13,7 @@
         <span>{{ technology }}</span>
       </div>
     </div>
-  </Block>
+  </AppBlock>
 </template>
 
 <script setup lang="ts">

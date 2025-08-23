@@ -1,5 +1,5 @@
 <template>
-  <Block title="Applications">
+  <AppBlock title="Applications">
     <div class="grid lg:grid-cols-2 gap-6 lg:gap-12">
       <div v-for="app in apps" class="flex gap-4">
         <ULink :to="app.url" target="_blank">
@@ -23,7 +23,7 @@
         </div>
       </div>
     </div>
-  </Block>
+  </AppBlock>
 </template>
 
 <script setup lang="ts">

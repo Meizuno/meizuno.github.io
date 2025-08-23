@@ -1,5 +1,5 @@
 <template>
-  <Block v-if="items" title="Experience">
+  <AppBlock v-if="items" title="Experience">
     <div class="flex flex-col gap-4">
       <div v-for="item in items" class="flex flex-col gap-4">
         <div class="flex gap-4">
@@ -40,7 +40,7 @@
         </div>
       </div>
     </div>
-  </Block>
+  </AppBlock>
 </template>
 
 <script setup lang="ts">

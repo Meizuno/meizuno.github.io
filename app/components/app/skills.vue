@@ -1,5 +1,5 @@
 <template>
-  <Block title="Skills">
+  <AppBlock title="Skills">
     <div class="flex flex-col gap-6">
       <div v-for="(skill, index) in skills" :key="index" class="flex flex-col">
         <div class="flex justify-between text-muted">
@@ -12,7 +12,7 @@
         <UProgress v-model="skill.value" :max="skill.max || 10" />
       </div>
     </div>
-  </Block>
+  </AppBlock>
 </template>
 
 <script setup lang="ts">

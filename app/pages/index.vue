@@ -3,28 +3,28 @@
     <div
       class="bg-muted py-2 px-4 lg:px-6 rounded flex flex-col gap-8 justify-between"
     >
-      <Skills />
-      <Technologies />
-      <Languages />
-      <Contacts />
+      <AppSkills />
+      <AppTechnologies />
+      <AppLanguages />
+      <AppContacts />
     </div>
     <div
       class="h-full bg-muted rounded px-6 lg:px-12 py-4 flex flex-col gap-6 justify-between"
     >
       <div>
-        <About />
+        <AppAbout />
       </div>
       <div class="h-fit grid lg:grid-cols-2 gap-6 lg:gap-12">
         <div class="flex flex-col justify-between gap-8">
-          <Experience />
-          <Education />
+          <AppExperience />
+          <AppEducation />
         </div>
         <div>
-          <Projects />
+          <AppProjects />
         </div>
       </div>
       <div>
-        <Applications />
+        <AppApplications />
       </div>
     </div>
   </div>

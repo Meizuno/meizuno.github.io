@@ -1,9 +1,9 @@
 <template>
-  <Block v-if="about" title="About me">
+  <AppBlock v-if="about" title="About me">
     <div class="font-semibold text-justify">
       {{ about }}
     </div>
-  </Block>
+  </AppBlock>
 </template>
 
 <script setup lang="ts">

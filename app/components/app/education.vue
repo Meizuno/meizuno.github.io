@@ -1,5 +1,5 @@
 <template>
-  <Block v-if="items" title="Education">
+  <AppBlock v-if="items" title="Education">
     <div v-for="item in items" class="flex flex-col gap-4">
       <div class="flex gap-4">
         <ULink :to="item.link" target="_blank">
@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-  </Block>
+  </AppBlock>
 </template>
 
 <script setup lang="ts">
