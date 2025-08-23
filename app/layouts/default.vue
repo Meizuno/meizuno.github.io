@@ -1,5 +1,5 @@
 <template>
-  <UContainer class="py-2 grid grid-rows-[auto_1fr] gap-2">
+  <UContainer class="py-2 flex flex-col gap-2">
     <header
       class="bg-muted h-fit p-4 rounded flex items-center justify-between gap-4"
     >
@@ -38,7 +38,9 @@
         </ClientOnly>
       </div>
     </header>
-    <slot />
+    <main class="">
+      <slot />
+    </main>
   </UContainer>
 </template>
 

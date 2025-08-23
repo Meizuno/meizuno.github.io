@@ -1,6 +1,8 @@
 <template>
-  <div class="relative p-4 bg-default rounded">
-    <pre><code v-html="highlightCode"></code></pre>
+  <div class="relative bg-default rounded">
+    <div class="p-4 overflow-auto mr-12">
+      <pre><code v-html="highlightCode"></code></pre>
+    </div>
     <div class="absolute top-2 right-2">
       <UTooltip
         :open="openTooltip"
