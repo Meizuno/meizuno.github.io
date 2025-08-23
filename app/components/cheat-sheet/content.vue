@@ -1,7 +1,7 @@
 <template>
   <div class="flex flex-col gap-8">
     <div v-for="block in data">
-      <Block :id="block.reference" :title="block.title">
+      <AppBlock :id="block.reference" :title="block.title">
         <div class="flex flex-col gap-4">
           <div
             :id="item.reference"
@@ -18,7 +18,7 @@
             </div>
           </div>
         </div>
-      </Block>
+      </AppBlock>
     </div>
   </div>
 </template>
