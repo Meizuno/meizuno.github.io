@@ -19,6 +19,9 @@ export default defineAppConfig({
       },
     },
     progress: {
+      slots: {
+        indicator: "duration-1000",
+      },
       defaultVariants: {
         animation: "carousel",
         color: "primary",

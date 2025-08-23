@@ -29,9 +29,20 @@
             fill="none"
             stroke-linecap="butt"
             :stroke-dasharray="circ"
-            :stroke-dashoffset="circ * (1 - lang.value / 100)"
+            :stroke-dashoffset="circ"
             :transform="`rotate(-90 ${c} ${c})`"
-          />
+          >
+            <animate
+              id="anim"
+              attributeName="stroke-dashoffset"
+              :from="circ"
+              :to="circ * (1 - lang.value / 100)"
+              dur="1s"
+              fill="freeze"
+              begin="indefinite"
+            />
+          </circle>
+
           <text
             :x="c"
             :y="c"
@@ -61,5 +72,11 @@ const circ = computed(() => 2 * Math.PI * r.value);
 const { data: languages } = await useAsyncData("languages", async () => {
   const data = await queryCollection("home").select("languages").first();
   return data?.languages ?? [];
+});
+
+onMounted(async () => {
+  document.querySelectorAll<SVGAnimateElement>("#anim").forEach(anim => {
+    anim.beginElement();
+  });
 });
 </script>

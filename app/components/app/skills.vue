@@ -9,7 +9,7 @@
           </ULink>
           <span class="text-xs">{{ skill.value }}/{{ skill.max || 10 }}</span>
         </div>
-        <UProgress v-model="skill.value" :max="skill.max || 10" />
+        <UProgress v-model="skillValue[index]" :max="skill.max || 10" />
       </div>
     </div>
   </AppBlock>
@@ -19,5 +19,11 @@
 const { data: skills } = await useAsyncData("skills", async () => {
   const data = await queryCollection("home").select("skills").first();
   return data?.skills ?? [];
+});
+
+const skillValue = ref(skills.value?.map(() => 0) || []);
+
+onMounted(() => {
+  skillValue.value = skills.value?.map((skill) => skill.value) || [];
 });
 </script>
