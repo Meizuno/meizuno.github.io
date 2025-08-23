@@ -24,6 +24,7 @@
             <USeparator
               v-if="index < item.roles.length - 1"
               orientation="vertical"
+              type="dashed"
               size="sm"
               class="absolute left-1.75 top-7.5 h-full"
             />

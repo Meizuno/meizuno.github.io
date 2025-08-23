@@ -36,6 +36,7 @@
             <USeparator
               v-if="index < item.list.length - 1"
               orientation="vertical"
+              type="dashed"
               size="sm"
               class="absolute left-3 top-11 h-3/4 my-auto"
             />

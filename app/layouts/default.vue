@@ -21,7 +21,8 @@
             color="neutral"
             variant="ghost"
             size="xl"
-            @click="console.log('Download CV')"
+            to="/yurii-myronov.pdf"
+            target="_blank"
             class="hover:bg-default"
           />
           <ClientOnly v-if="!colorMode?.forced">

@@ -2,7 +2,7 @@
   <div class="flex flex-col gap-8">
     <div v-for="block in data">
       <AppBlock :id="block.reference" :title="block.title">
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-8">
           <div
             :id="item.reference"
             v-for="item in block.content"

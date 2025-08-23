@@ -1,6 +1,6 @@
 <template>
   <AppBlock title="Applications">
-    <div class="grid lg:grid-cols-2 gap-6 lg:gap-12">
+    <div class="grid md:grid-cols-2 gap-6 lg:gap-12">
       <div v-for="app in apps" class="flex gap-4">
         <ULink :to="app.url" target="_blank">
           <NuxtImg
