@@ -1,41 +1,44 @@
 <template>
   <UContainer class="py-2 flex flex-col gap-2">
     <header
-      class="bg-muted h-fit p-4 rounded flex items-center justify-between gap-4"
+      class="bg-muted p-4 rounded grid grid-rows-[auto_auto_auto] md:grid-rows-1 md:grid-cols-[3fr_2fr] lg:grid-cols-[1fr_1fr] items-center gap-4"
     >
       <User />
-      <UNavigationMenu
-        :items="items"
-        size="lg"
-        :ui="{
-          linkLabel: 'hidden sm:block truncate md:text-xl',
-          linkLeadingIcon: 'shrink-0 size-8',
-          link: 'flex-col gap-1 md:gap-2 md:flex-row',
-        }"
-      />
-      <div class="hidden md:flex items-center">
-        <UButton
-          icon="i-lucide-download"
-          color="neutral"
-          variant="ghost"
-          size="xl"
-          @click="console.log('Download CV')"
-          class="hover:bg-default"
+      <USeparator class="block md:hidden" />
+      <div class="flex justify-between items-center">
+        <UNavigationMenu
+          :items="items"
+          size="lg"
+          :ui="{
+            linkLabel: 'hidden sm:block truncate lg:text-xl',
+            linkLeadingIcon: 'shrink-0 size-8',
+            link: 'flex-col gap-2 lg:flex-row',
+          }"
         />
-        <ClientOnly v-if="!colorMode?.forced">
+        <div class="flex items-center">
           <UButton
-            :icon="isDark ? 'i-lucide-sun' : 'i-lucide-moon'"
+            icon="i-lucide-download"
             color="neutral"
             variant="ghost"
             size="xl"
+            @click="console.log('Download CV')"
             class="hover:bg-default"
-            @click="isDark = !isDark"
           />
+          <ClientOnly v-if="!colorMode?.forced">
+            <UButton
+              :icon="isDark ? 'i-lucide-sun' : 'i-lucide-moon'"
+              color="neutral"
+              variant="ghost"
+              size="xl"
+              class="hover:bg-default"
+              @click="isDark = !isDark"
+            />
 
-          <template #fallback>
-            <div class="size-8" />
-          </template>
-        </ClientOnly>
+            <template #fallback>
+              <div class="size-8" />
+            </template>
+          </ClientOnly>
+        </div>
       </div>
     </header>
     <main class="">

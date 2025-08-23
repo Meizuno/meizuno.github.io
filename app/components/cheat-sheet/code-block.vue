@@ -1,6 +1,6 @@
 <template>
   <div class="relative bg-default rounded">
-    <div class="p-4 overflow-auto mr-12">
+    <div class="p-4 overflow-auto mr-12 border-s-2 border-primary">
       <pre><code v-html="highlightCode"></code></pre>
     </div>
     <div class="absolute top-2 right-2">
