@@ -1,6 +1,6 @@
 <template>
   <AppBlock title="Applications">
-    <div class="grid md:grid-cols-2 gap-6 lg:gap-12">
+    <div class="grid gap-6" :class="customClass">
       <div v-for="app in apps" class="flex gap-4">
         <ULink :to="app.url" target="_blank">
           <NuxtImg
@@ -27,6 +27,13 @@
 </template>
 
 <script setup lang="ts">
+defineProps({
+  customClass: {
+    type: String,
+    default: "",
+  },
+})
+
 const { data: apps } = await useAsyncData("application", async () => {
   const data = await queryCollection("home").select("application").first();
   return data?.application ?? [];

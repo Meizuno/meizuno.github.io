@@ -1,6 +1,6 @@
 <template>
-  <div class="max-w-5xl p-2 mx-auto flex justify-center items-center">
-    <div class="aspect-[210/297] w-[934px] overflow-clip">
+  <div class="max-w-5xl min-w-5xl p-2 mx-auto flex justify-center items-center">
+    <div class="aspect-[210/297] w-[934px] min-w-[934px] overflow-clip">
       <div class="h-full w-full flex flex-col gap-2">
         <header
           class="bg-muted rounded py-2 px-6 flex justify-between items-center"
@@ -33,7 +33,7 @@
             <div>
               <AppAbout />
             </div>
-            <div class="h-fit grid md:grid-cols-2 gap-6 lg:gap-12">
+            <div class="h-fit grid grid-cols-2 gap-6 lg:gap-12">
               <div class="flex flex-col justify-between">
                 <AppExperience />
                 <AppEducation />
@@ -43,7 +43,7 @@
               </div>
             </div>
             <div>
-              <AppApplications />
+              <AppApplications :custom-class="'md:grid-cols-2 md:gap-12'" />
             </div>
           </div>
         </main>
