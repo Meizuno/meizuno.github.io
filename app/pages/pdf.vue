@@ -6,15 +6,14 @@
           class="bg-muted rounded py-2 px-6 flex justify-between items-center"
         >
           <AppUser />
-          <div class="grid grid-cols-2">
+          <div class="w-1/2 grid grid-cols-2 gap-2">
             <div v-for="contact in contacts">
               <UButton
                 :label="contact.title"
                 :icon="contact.icon"
                 :to="contact.to"
                 color="neutral"
-                variant="subtle"
-                size="xl"
+                variant="outline"
                 class="hover:bg-default w-full"
               />
             </div>
