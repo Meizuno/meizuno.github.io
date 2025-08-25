@@ -7,23 +7,47 @@
             "reference": "docker-network",
             "content": [
                 {
-                    "syntax:": "bash",
-                    "command": "docker network ls",
+                    "commands": [
+                        {
+                            "syntax:": "bash",
+                            "icon": "i-lucide-terminal",
+                            "name": "Terminal",
+                            "code": "docker network ls"
+                        }
+                    ],
                     "description": "List all networks"
                 },
                 {
-                    "syntax:": "bash",
-                    "command": "docker network create <network_name>",
+                    "commands": [
+                        {
+                            "syntax:": "bash",
+                            "icon": "i-lucide-terminal",
+                            "name": "Terminal",
+                            "code": "docker network create <network_name>"
+                        }
+                    ],
                     "description": "Create a new network"
                 },
                 {
-                    "syntax:": "bash",
-                    "command": "docker network inspect <network_name>",
+                    "commands": [
+                        {
+                            "syntax:": "bash",
+                            "icon": "i-lucide-terminal",
+                            "name": "Terminal",
+                            "code": "docker network inspect <network_name>"
+                        }
+                    ],
                     "description": "Inspect a network"
                 },
                 {
-                    "syntax:": "bash",
-                    "command": "docker network rm <network_name>",
+                    "commands": [
+                        {
+                            "syntax:": "bash",
+                            "icon": "i-lucide-terminal",
+                            "name": "Terminal",
+                            "code": "docker network rm <network_name>"
+                        }
+                    ],
                     "description": "Remove a network"
                 }
             ]
@@ -33,23 +57,47 @@
             "reference": "docker-volume",
             "content": [
                 {
-                    "syntax:": "bash",
-                    "command": "docker volume ls",
+                    "commands": [
+                        {
+                            "syntax:": "bash",
+                            "icon": "i-lucide-terminal",
+                            "name": "Terminal",
+                            "code": "docker volume ls"
+                        }
+                    ],
                     "description": "List all volumes"
                 },
                 {
-                    "syntax:": "bash",
-                    "command": "docker volume create <volume_name>",
+                    "commands": [
+                        {
+                            "syntax:": "bash",
+                            "icon": "i-lucide-terminal",
+                            "name": "Terminal",
+                            "code": "docker volume create <volume_name>"
+                        }
+                    ],
                     "description": "Create a new volume"
                 },
                 {
-                    "syntax:": "bash",
-                    "command": "docker volume inspect <volume_name>",
+                    "commands": [
+                        {
+                            "syntax:": "bash",
+                            "icon": "i-lucide-terminal",
+                            "name": "Terminal",
+                            "code": "docker volume inspect <volume_name>"
+                        }
+                    ],
                     "description": "Inspect a volume"
                 },
                 {
-                    "syntax:": "bash",
-                    "command": "docker volume rm <volume_name>",
+                    "commands": [
+                        {
+                            "syntax:": "bash",
+                            "icon": "i-lucide-terminal",
+                            "name": "Terminal",
+                            "code": "docker volume rm <volume_name>"
+                        }
+                    ],
                     "description": "Remove a volume"
                 }
             ]

@@ -77,5 +77,29 @@ export default defineAppConfig({
         content: "bg-muted px-3 py-1.5",
       },
     },
+    tabs: {
+      slots: {
+        root: "gap-0",
+        list: "bg-elevated inset-shadow-md rounded-t-lg",
+        indicator: "hidden",
+        content: "border-s-4 border-primary"
+      },
+      variants: {
+        variant: {
+          link: {
+            list: "border-none",
+          },
+        },
+      },
+      compoundVariants: [
+        {
+          color: "neutral",
+          variant: "link",
+          class: {
+            trigger: "data-[state=active]:bg-muted",
+          },
+        },
+      ],
+    },
   },
 });

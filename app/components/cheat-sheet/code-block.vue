@@ -1,9 +1,19 @@
 <template>
-  <div class="relative bg-default rounded">
-    <div class="p-4 overflow-auto mr-12 border-s-4 border-primary">
-      <pre><code v-html="highlightCode"></code></pre>
-    </div>
-    <div class="absolute top-2 right-2">
+  <div class="relative bg-default rounded flex flex-col">
+    <UTabs
+      color="neutral"
+      variant="link"
+      :items="commands"
+      label-key="name"
+    >
+      <template #content="{ item }">
+        <div class="px-4 py-2 overflow-auto">
+          <pre><code v-html="highlightCode(item.code, item.syntax)"></code></pre>
+        </div>
+      </template>
+    </UTabs>
+
+    <div class="absolute top-1 right-2">
       <UTooltip
         :open="openTooltip"
         text="Copied!"
@@ -30,19 +40,28 @@ import hljs from "highlight.js";
 import "highlight.js/styles/github-dark.css";
 
 const props = defineProps({
-  code: {
-    type: String,
-    required: true,
-  },
-  language: {
-    type: String,
-    default: "bash",
+  commands: {
+    type: Array as () => Array<{
+      name: string;
+      icon: string;
+      code: string;
+      syntax: string;
+    }>,
+    default: () => [],
   },
 });
 
-const highlightCode = computed(() => {
-  return hljs.highlight(props.code, { language: props.language }).value;
-});
+const activeCommand = ref(
+  props.commands.length > 0
+    ? props.commands[0]
+    : { name: "", icon: "", code: "", syntax: "bash" }
+);
+
+const highlightCode = (code: string, language: string) => {
+  return hljs.highlight(code, {
+    language: language || "bash",
+  }).value;
+};
 
 const copyIcon = ref("i-ph-copy-bold");
 const colorIcon = ref<"neutral" | "primary">("neutral");
@@ -50,7 +69,7 @@ const openTooltip = ref(false);
 
 const copy = () => {
   colorIcon.value = "primary";
-  navigator.clipboard.writeText(props.code).then(() => {
+  navigator.clipboard.writeText(activeCommand.value.code).then(() => {
     copyIcon.value = "i-ph-check-bold";
     openTooltip.value = true;
     setTimeout(() => {

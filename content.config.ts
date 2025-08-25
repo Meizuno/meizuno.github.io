@@ -111,9 +111,15 @@ export default defineContentConfig({
             reference: z.string(),
             content: z.array(
               z.object({
-                command: z.string(),
+                commands: z.array(
+                  z.object({
+                    syntax: z.string(),
+                    name: z.string(),
+                    icon: z.string(),
+                    code: z.string(),
+                  })
+                ),
                 description: z.string(),
-                syntax: z.string().optional(),
               })
             ),
           })
