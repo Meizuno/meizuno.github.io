@@ -13,7 +13,7 @@
                 :icon="contact.icon"
                 :to="contact.to"
                 color="neutral"
-                variant="ghost"
+                variant="subtle"
                 size="xl"
                 class="hover:bg-default w-full"
               />
