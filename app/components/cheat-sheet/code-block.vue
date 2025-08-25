@@ -5,6 +5,13 @@
       variant="link"
       :items="commands"
       label-key="name"
+      :ui="{
+        trigger: [
+          commands.length > 1
+            ? 'data-[state=active]:not-disabled:bg-default'
+            : '',
+        ],
+      }"
     >
       <template #content="{ item }">
         <div class="px-4 py-2 overflow-auto">
@@ -13,7 +20,7 @@
       </template>
     </UTabs>
 
-    <div class="absolute top-1 right-2">
+    <div class="absolute top-1.5 right-1.5">
       <UTooltip
         :open="openTooltip"
         text="Copied!"

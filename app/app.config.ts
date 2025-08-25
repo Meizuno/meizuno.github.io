@@ -74,20 +74,27 @@ export default defineAppConfig({
     },
     tooltip: {
       slots: {
-        content: "bg-muted px-3 py-1.5",
+        content: "bg-default px-3 py-1.5",
       },
     },
     tabs: {
       slots: {
         root: "gap-0",
-        list: "bg-elevated inset-shadow-md rounded-t-lg",
+        list: "bg-elevated inset-shadow-md rounded-t-lg gap-1 px-2",
         indicator: "hidden",
-        content: "border-s-4 border-primary"
+        content: "border-s-2 border-primary",
+        trigger:
+          "data-[state=inactive]:text-default hover:data-[state=inactive]:not-disabled:bg-default",
       },
       variants: {
         variant: {
           link: {
             list: "border-none",
+          },
+        },
+        size: {
+          md: {
+            trigger: "py-2",
           },
         },
       },
