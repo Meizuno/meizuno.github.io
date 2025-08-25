@@ -9,7 +9,7 @@
                 {
                     "commands": [
                         {
-                            "syntax:": "bash",
+                            "syntax": "bash",
                             "icon": "i-lucide-terminal",
                             "name": "Terminal",
                             "code": "python -m venv <env_name>"
@@ -20,7 +20,7 @@
                 {
                     "commands": [
                         {
-                            "syntax:": "bash",
+                            "syntax": "bash",
                             "icon": "i-lucide-terminal",
                             "name": "Terminal",
                             "code": "source <env_name>/bin/activate"
@@ -31,7 +31,7 @@
                 {
                     "commands": [
                         {
-                            "syntax:": "bash",
+                            "syntax": "bash",
                             "icon": "i-lucide-terminal",
                             "name": "Terminal",
                             "code": "<env_name>\\Scripts\\activate"
@@ -42,7 +42,7 @@
                 {
                     "commands": [
                         {
-                            "syntax:": "bash",
+                            "syntax": "bash",
                             "icon": "i-lucide-terminal",
                             "name": "Terminal",
                             "code": "deactivate"
@@ -59,7 +59,7 @@
                 {
                     "commands": [
                         {
-                            "syntax:": "bash",
+                            "syntax": "bash",
                             "icon": "i-lucide-terminal",
                             "name": "Terminal",
                             "code": "pip install <package_name>"
@@ -70,7 +70,7 @@
                 {
                     "commands": [
                         {
-                            "syntax:": "bash",
+                            "syntax": "bash",
                             "icon": "i-lucide-terminal",
                             "name": "Terminal",
                             "code": "pip install -r requirements.txt"
@@ -81,7 +81,7 @@
                 {
                     "commands": [
                         {
-                            "syntax:": "bash",
+                            "syntax": "bash",
                             "icon": "i-lucide-terminal",
                             "name": "Terminal",
                             "code": "pip freeze > requirements.txt"
@@ -92,7 +92,7 @@
                 {
                     "commands": [
                         {
-                            "syntax:": "bash",
+                            "syntax": "bash",
                             "icon": "i-lucide-terminal",
                             "name": "Terminal",
                             "code": "pip list"
@@ -103,7 +103,7 @@
                 {
                     "commands": [
                         {
-                            "syntax:": "bash",
+                            "syntax": "bash",
                             "icon": "i-lucide-terminal",
                             "name": "Terminal",
                             "code": "pip uninstall <package_name>"

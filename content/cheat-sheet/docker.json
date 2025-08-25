@@ -9,7 +9,7 @@
                 {
                     "commands": [
                         {
-                            "syntax:": "bash",
+                            "syntax": "bash",
                             "icon": "i-lucide-terminal",
                             "name": "Terminal",
                             "code": "docker network ls"
@@ -20,7 +20,7 @@
                 {
                     "commands": [
                         {
-                            "syntax:": "bash",
+                            "syntax": "bash",
                             "icon": "i-lucide-terminal",
                             "name": "Terminal",
                             "code": "docker network create <network_name>"
@@ -31,7 +31,7 @@
                 {
                     "commands": [
                         {
-                            "syntax:": "bash",
+                            "syntax": "bash",
                             "icon": "i-lucide-terminal",
                             "name": "Terminal",
                             "code": "docker network inspect <network_name>"
@@ -42,7 +42,7 @@
                 {
                     "commands": [
                         {
-                            "syntax:": "bash",
+                            "syntax": "bash",
                             "icon": "i-lucide-terminal",
                             "name": "Terminal",
                             "code": "docker network rm <network_name>"
@@ -59,7 +59,7 @@
                 {
                     "commands": [
                         {
-                            "syntax:": "bash",
+                            "syntax": "bash",
                             "icon": "i-lucide-terminal",
                             "name": "Terminal",
                             "code": "docker volume ls"
@@ -70,7 +70,7 @@
                 {
                     "commands": [
                         {
-                            "syntax:": "bash",
+                            "syntax": "bash",
                             "icon": "i-lucide-terminal",
                             "name": "Terminal",
                             "code": "docker volume create <volume_name>"
@@ -81,7 +81,7 @@
                 {
                     "commands": [
                         {
-                            "syntax:": "bash",
+                            "syntax": "bash",
                             "icon": "i-lucide-terminal",
                             "name": "Terminal",
                             "code": "docker volume inspect <volume_name>"
@@ -92,7 +92,7 @@
                 {
                     "commands": [
                         {
-                            "syntax:": "bash",
+                            "syntax": "bash",
                             "icon": "i-lucide-terminal",
                             "name": "Terminal",
                             "code": "docker volume rm <volume_name>"
