@@ -3,6 +3,95 @@
   "reference": "docker",
   "content": [
     {
+      "title": "Docker Image",
+      "content": [
+        {
+          "description": "List all images",
+          "commands": [
+            {
+              "syntax": "bash",
+              "name": "Terminal",
+              "icon": "i-lucide-terminal",
+              "code": "docker image ls -a"
+            }
+          ]
+        },
+        {
+          "description": "Build image",
+          "commands": [
+            {
+              "syntax": "bash",
+              "name": "Terminal",
+              "icon": "i-lucide-terminal",
+              "code": "docker build <context>"
+            }
+          ]
+        },
+        {
+          "description": "Remove image",
+          "commands": [
+            {
+              "syntax": "bash",
+              "name": "Terminal",
+              "icon": "i-lucide-terminal",
+              "code": "docker rmi <image_id>"
+            }
+          ]
+        }
+      ],
+      "reference": "docker-image"
+    },
+    {
+      "title": "Docker Container",
+      "content": [
+        {
+          "description": "List all containers",
+          "commands": [
+            {
+              "syntax": "bash",
+              "name": "Terminal",
+              "icon": "i-lucide-terminal",
+              "code": "docker ps -a"
+            }
+          ]
+        },
+        {
+          "description": "Run new Container",
+          "commands": [
+            {
+              "icon": "i-lucide-terminal",
+              "name": "Terminal",
+              "syntax": "bash",
+              "code": "docker run -d --name <container_name> --network <network_name> --env-file <env_file> <image_name>"
+            }
+          ]
+        },
+        {
+          "description": "Stop running container",
+          "commands": [
+            {
+              "icon": "i-lucide-terminal",
+              "name": "Terminal",
+              "syntax": "bash",
+              "code": "docker stop <container_id>"
+            }
+          ]
+        },
+        {
+          "description": "Remove stopped container",
+          "commands": [
+            {
+              "icon": "i-lucide-terminal",
+              "name": "Terminal",
+              "syntax": "bash",
+              "code": "docker rm <container_id>"
+            }
+          ]
+        }
+      ],
+      "reference": "docker-container"
+    },
+    {
       "title": "Docker Network",
       "reference": "docker-network",
       "content": [
