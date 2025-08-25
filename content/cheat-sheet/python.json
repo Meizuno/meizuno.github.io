@@ -9,9 +9,9 @@
                 {
                     "commands": [
                         {
-                            "syntax": "bash",
+                            "language": "bash",
                             "icon": "i-lucide-terminal",
-                            "name": "Terminal",
+                            "file": "Terminal",
                             "code": "python -m venv <env_name>"
                         }
                     ],
@@ -20,9 +20,9 @@
                 {
                     "commands": [
                         {
-                            "syntax": "bash",
+                            "language": "bash",
                             "icon": "i-lucide-terminal",
-                            "name": "Terminal",
+                            "file": "Terminal",
                             "code": "source <env_name>/bin/activate"
                         }
                     ],
@@ -31,9 +31,9 @@
                 {
                     "commands": [
                         {
-                            "syntax": "bash",
+                            "language": "bash",
                             "icon": "i-lucide-terminal",
-                            "name": "Terminal",
+                            "file": "Terminal",
                             "code": "<env_name>\\Scripts\\activate"
                         }
                     ],
@@ -42,9 +42,9 @@
                 {
                     "commands": [
                         {
-                            "syntax": "bash",
+                            "language": "bash",
                             "icon": "i-lucide-terminal",
-                            "name": "Terminal",
+                            "file": "Terminal",
                             "code": "deactivate"
                         }
                     ],
@@ -59,9 +59,9 @@
                 {
                     "commands": [
                         {
-                            "syntax": "bash",
+                            "language": "bash",
                             "icon": "i-lucide-terminal",
-                            "name": "Terminal",
+                            "file": "Terminal",
                             "code": "pip install <package_name>"
                         }
                     ],
@@ -70,9 +70,9 @@
                 {
                     "commands": [
                         {
-                            "syntax": "bash",
+                            "language": "bash",
                             "icon": "i-lucide-terminal",
-                            "name": "Terminal",
+                            "file": "Terminal",
                             "code": "pip install -r requirements.txt"
                         }
                     ],
@@ -81,9 +81,9 @@
                 {
                     "commands": [
                         {
-                            "syntax": "bash",
+                            "language": "bash",
                             "icon": "i-lucide-terminal",
-                            "name": "Terminal",
+                            "file": "Terminal",
                             "code": "pip freeze > requirements.txt"
                         }
                     ],
@@ -92,9 +92,9 @@
                 {
                     "commands": [
                         {
-                            "syntax": "bash",
+                            "language": "bash",
                             "icon": "i-lucide-terminal",
-                            "name": "Terminal",
+                            "file": "Terminal",
                             "code": "pip list"
                         }
                     ],
@@ -103,9 +103,9 @@
                 {
                     "commands": [
                         {
-                            "syntax": "bash",
+                            "language": "bash",
                             "icon": "i-lucide-terminal",
-                            "name": "Terminal",
+                            "file": "Terminal",
                             "code": "pip uninstall <package_name>"
                         }
                     ],

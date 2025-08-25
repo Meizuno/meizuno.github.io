@@ -113,8 +113,8 @@ export default defineContentConfig({
               z.object({
                 commands: z.array(
                   z.object({
-                    syntax: z.string(),
-                    name: z.string(),
+                    language: z.string(),
+                    file: z.string(),
                     icon: z.string(),
                     code: z.string(),
                   })

@@ -4,7 +4,7 @@
       color="neutral"
       variant="link"
       :items="commands"
-      label-key="name"
+      label-key="file"
       :ui="{
         trigger: [
           commands.length > 1
@@ -15,7 +15,7 @@
     >
       <template #content="{ item }">
         <div class="px-4 py-2 overflow-auto">
-          <pre><code v-html="highlightCode(item.code, item.syntax)"></code></pre>
+          <pre><code v-html="highlightCode(item.code, item.language)"></code></pre>
         </div>
       </template>
     </UTabs>
@@ -49,10 +49,10 @@ import "highlight.js/styles/github-dark.css";
 const props = defineProps({
   commands: {
     type: Array as () => Array<{
-      name: string;
+      file: string;
       icon: string;
       code: string;
-      syntax: string;
+      language: string;
     }>,
     default: () => [],
   },
@@ -61,7 +61,7 @@ const props = defineProps({
 const activeCommand = ref(
   props.commands.length > 0
     ? props.commands[0]
-    : { name: "", icon: "", code: "", syntax: "bash" }
+    : { file: "", icon: "", code: "", language: "bash" }
 );
 
 const highlightCode = (code: string, language: string) => {
@@ -76,7 +76,7 @@ const openTooltip = ref(false);
 
 const copy = () => {
   colorIcon.value = "primary";
-  navigator.clipboard.writeText(activeCommand.value.code).then(() => {
+  navigator.clipboard.writeText(activeCommand.value?.code || "").then(() => {
     copyIcon.value = "i-ph-check-bold";
     openTooltip.value = true;
     setTimeout(() => {
