@@ -6,12 +6,13 @@
           <div
             :id="item.reference"
             v-for="item in block.content"
-            class="flex flex-col gap-4"
+            class="flex flex-col gap-8"
           >
             <h4 class="text-lg font-semibold">{{ item.title }}</h4>
             <div v-for="command in item.content" class="flex flex-col gap-2">
-              <span class="text-muted">{{ command.description }}</span>
               <CheatSheetCodeBlock :commands="command.commands" />
+              <span class="text-muted mb-4">{{ command.description }}</span>
+              <USeparator size="xs" />
             </div>
           </div>
         </div>
