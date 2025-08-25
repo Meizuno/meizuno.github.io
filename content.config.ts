@@ -105,6 +105,7 @@ export default defineContentConfig({
       schema: z.object({
         title: z.string(),
         reference: z.string(),
+        icon: z.string(),
         content: z.array(
           z.object({
             title: z.string(),

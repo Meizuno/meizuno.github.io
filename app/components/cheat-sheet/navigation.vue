@@ -20,6 +20,7 @@ const navigation = computed(() => {
     return {
       label: item.title,
       defaultOpen: true,
+      icon: item.icon,
       children: item.content.map((child) => {
         return {
           label: child.title,

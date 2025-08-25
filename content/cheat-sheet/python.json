@@ -1,8 +1,9 @@
 {
     "title": "Python",
     "reference": "python",
+    "icon": "i-vscode-icons-file-type-python",
     "content": [
-        {            
+        {
             "title": "Python Environment",
             "reference": "python-environment",
             "content": [
