@@ -129,7 +129,7 @@
           ]
         },
         {
-          "description": "Create example file in `src` folder",
+          "description": "Create example file in src folder",
           "commands": [
             {
               "icon": "i-vscode-icons-file-type-python",
@@ -140,7 +140,7 @@
           ]
         },
         {
-          "description": "Start server. Check running server at [http://localhost:8000](http://localhost:8000)",
+          "description": "Start server. Check running server at http://localhost:8000",
           "commands": [
             {
               "icon": "i-lucide-terminal",
