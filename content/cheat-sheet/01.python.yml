@@ -73,7 +73,14 @@ content:
             file: Terminal
             icon: i-lucide-terminal
             code: pip install fastapi uvicorn
-      - description: Create example file in src folder
+      - description: |
+          ::prose-inline
+          Create example file in
+          ::u-badge{color="neutral" variant="outline" size="lg"}
+          src
+          ::
+          folder
+          ::
         commands:
           - icon: i-vscode-icons-file-type-python
             file: src/main.py
@@ -87,7 +94,13 @@ content:
               @app.get("/")
               def read_root():
                   return {"Hello": "World"}
-      - description: Start server. Check running server at http://localhost:8000
+      - description: |
+          ::prose-inline
+          Start server. Check running server at
+          ::u-link{to="http://localhost:8000" target="_blank" class="text-primary"}
+          localhost:8000
+          ::
+          ::
         commands:
           - icon: i-lucide-terminal
             file: Terminal

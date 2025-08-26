@@ -19,7 +19,7 @@
         </template>
       </UCollapsible>
     </div>
-    <div class="relative bg-muted py-2 px-4 lg:px-6 rounded">
+    <div class="relative bg-muted py-2 px-4 lg:px-6 rounded overflow-auto">
       <CheatSheetContent />
     </div>
   </div>

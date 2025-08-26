@@ -11,7 +11,7 @@
             <h4 class="text-lg font-semibold">{{ item.title }}</h4>
             <div v-for="command in item.content" class="flex flex-col gap-2">
               <CheatSheetCodeBlock :commands="command.commands" />
-              <span class="text-muted mb-4">{{ command.description }}</span>
+              <MDC class="text-muted mb-4" :value="command.description" />
               <USeparator size="xs" />
             </div>
           </div>

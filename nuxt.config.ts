@@ -2,7 +2,13 @@
 export default defineNuxtConfig({
   compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  modules: ["@nuxt/image", "@nuxt/ui", "@nuxt/content", "@nuxtjs/sitemap"],
+  modules: [
+    "@nuxt/image",
+    "@nuxt/ui",
+    "@nuxt/content",
+    "@nuxtjs/sitemap",
+    "@nuxtjs/mdc",
+  ],
   css: ["~/assets/css/main.css"],
 
   app: {
@@ -49,5 +55,10 @@ export default defineNuxtConfig({
   site: {
     url: "https://meizuno.github.io",
     name: "Meizuno Portfolio",
+  },
+
+  components: {
+    global: true,
+    dirs: ["~/components"],
   },
 });
