@@ -1,0 +1,95 @@
+title: Python
+reference: python
+icon: i-vscode-icons-file-type-python
+content:
+  - title: Python Environment
+    reference: python-environment
+    content:
+      - description: Create a virtual environment
+        commands:
+          - language: bash
+            icon: i-lucide-terminal
+            file: Terminal
+            code: python -m venv <env_name>
+      - description: Activate the virtual environment (Linux/Mac)
+        commands:
+          - language: bash
+            icon: i-lucide-terminal
+            file: Terminal
+            code: source <env_name>/bin/activate
+      - description: Activate the virtual environment (Windows)
+        commands:
+          - language: bash
+            icon: i-lucide-terminal
+            file: Terminal
+            code: "<env_name>\\Scripts\\activate"
+      - description: Deactivate the virtual environment
+        commands:
+          - language: bash
+            icon: i-lucide-terminal
+            file: Terminal
+            code: deactivate
+
+  - title: Python Package Management
+    reference: python-package-management
+    content:
+      - description: Install a package
+        commands:
+          - language: bash
+            icon: i-lucide-terminal
+            file: Terminal
+            code: pip install <package_name>
+      - description: Install packages from a requirements file
+        commands:
+          - language: bash
+            icon: i-lucide-terminal
+            file: Terminal
+            code: pip install -r requirements.txt
+      - description: Export installed packages to a requirements file
+        commands:
+          - language: bash
+            icon: i-lucide-terminal
+            file: Terminal
+            code: pip freeze > requirements.txt
+      - description: List installed packages
+        commands:
+          - language: bash
+            icon: i-lucide-terminal
+            file: Terminal
+            code: pip list
+      - description: Uninstall a package
+        commands:
+          - language: bash
+            icon: i-lucide-terminal
+            file: Terminal
+            code: pip uninstall <package_name>
+
+  - title: FastAPI Server
+    reference: fastapi-server
+    content:
+      - description: Install packages
+        commands:
+          - language: bash
+            file: Terminal
+            icon: i-lucide-terminal
+            code: pip install fastapi uvicorn
+      - description: Create example file in src folder
+        commands:
+          - icon: i-vscode-icons-file-type-python
+            file: src/main.py
+            language: python
+            code: |
+              from typing import Union
+              from fastapi import FastAPI
+
+              app = FastAPI()
+
+              @app.get("/")
+              def read_root():
+                  return {"Hello": "World"}
+      - description: Start server. Check running server at http://localhost:8000
+        commands:
+          - icon: i-lucide-terminal
+            file: Terminal
+            language: bash
+            code: uvicorn src.main:app --host 0.0.0.0 --port 8000

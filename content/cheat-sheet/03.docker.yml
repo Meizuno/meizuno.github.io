@@ -1,0 +1,109 @@
+title: Docker
+reference: docker
+icon: i-vscode-icons-file-type-docker2
+content:
+  - title: Docker Image
+    reference: docker-image
+    content:
+      - description: List all images
+        commands:
+          - language: bash
+            file: Terminal
+            icon: i-lucide-terminal
+            code: docker image ls -a
+      - description: Build image
+        commands:
+          - language: bash
+            file: Terminal
+            icon: i-lucide-terminal
+            code: docker build <context>
+      - description: Remove image
+        commands:
+          - language: bash
+            file: Terminal
+            icon: i-lucide-terminal
+            code: docker rmi <image_id>
+
+  - title: Docker Container
+    reference: docker-container
+    content:
+      - description: List all containers
+        commands:
+          - language: bash
+            file: Terminal
+            icon: i-lucide-terminal
+            code: docker ps -a
+      - description: Run new Container
+        commands:
+          - language: bash
+            file: Terminal
+            icon: i-lucide-terminal
+            code: docker run -d --name <container_name> --network <network_name> --env-file <env_file> <image_name>
+      - description: Stop running container
+        commands:
+          - language: bash
+            file: Terminal
+            icon: i-lucide-terminal
+            code: docker stop <container_id>
+      - description: Remove stopped container
+        commands:
+          - language: bash
+            file: Terminal
+            icon: i-lucide-terminal
+            code: docker rm <container_id>
+
+  - title: Docker Network
+    reference: docker-network
+    content:
+      - description: List all networks
+        commands:
+          - language: bash
+            file: Terminal
+            icon: i-lucide-terminal
+            code: docker network ls
+      - description: Create a new network
+        commands:
+          - language: bash
+            file: Terminal
+            icon: i-lucide-terminal
+            code: docker network create <network_name>
+      - description: Inspect a network
+        commands:
+          - language: bash
+            file: Terminal
+            icon: i-lucide-terminal
+            code: docker network inspect <network_name>
+      - description: Remove a network
+        commands:
+          - language: bash
+            file: Terminal
+            icon: i-lucide-terminal
+            code: docker network rm <network_name>
+
+  - title: Docker Volume
+    reference: docker-volume
+    content:
+      - description: List all volumes
+        commands:
+          - language: bash
+            file: Terminal
+            icon: i-lucide-terminal
+            code: docker volume ls
+      - description: Create a new volume
+        commands:
+          - language: bash
+            file: Terminal
+            icon: i-lucide-terminal
+            code: docker volume create <volume_name>
+      - description: Inspect a volume
+        commands:
+          - language: bash
+            file: Terminal
+            icon: i-lucide-terminal
+            code: docker volume inspect <volume_name>
+      - description: Remove a volume
+        commands:
+          - language: bash
+            file: Terminal
+            icon: i-lucide-terminal
+            code: docker volume rm <volume_name>

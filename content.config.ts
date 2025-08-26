@@ -1,5 +1,4 @@
 import { defineCollection, defineContentConfig, z } from "@nuxt/content";
-import { de } from "@nuxt/ui/runtime/locale/index.js";
 
 export default defineContentConfig({
   collections: {
@@ -101,7 +100,7 @@ export default defineContentConfig({
     }),
     cheatSheet: defineCollection({
       type: "data",
-      source: "cheat-sheet/**.json",
+      source: "cheat-sheet/**.yml",
       schema: z.object({
         title: z.string(),
         reference: z.string(),
