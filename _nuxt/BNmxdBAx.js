@@ -1,1 +1,0 @@
-import{_ as t,d as s,e as c,a0 as n}from"./CHkcllE_.js";const o={},r={class:"text-muted mb-4"};function a(e,_){return c(),s("div",r,[n(e.$slots,"default")])}const i=Object.assign(t(o,[["render",a]]),{__name:"MdDescription"});export{i as default};
