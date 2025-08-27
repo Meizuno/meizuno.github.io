@@ -15,7 +15,6 @@
 const cheatSheets = await queryCollection("cheatSheet").all();
 const navigation = computed(() => {
   return cheatSheets.map((cheatSheet) => {
-    console.log(cheatSheet.body.toc)
     return {
       label: cheatSheet.title,
       defaultOpen: true,
