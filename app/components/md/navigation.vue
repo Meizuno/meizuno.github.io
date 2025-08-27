@@ -12,13 +12,10 @@
 </template>
 
 <script setup lang="ts">
-// const { data } = await useAsyncData("cheat-sheet", () => {
-//   return queryCollection("cheatSheet").all();
-// });
-
 const cheatSheets = await queryCollection("cheatSheet").all();
 const navigation = computed(() => {
   return cheatSheets.map((cheatSheet) => {
+    console.log(cheatSheet.body.value)
     return {
       label: cheatSheet.title,
       defaultOpen: true,
