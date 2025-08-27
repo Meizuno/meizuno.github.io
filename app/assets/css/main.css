@@ -27,3 +27,7 @@
     @apply cursor-pointer
   }
 }
+
+h4 {
+  @apply text-lg font-semibold
+}

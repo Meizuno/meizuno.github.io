@@ -99,31 +99,11 @@ export default defineContentConfig({
       }),
     }),
     cheatSheet: defineCollection({
-      type: "data",
-      source: "cheat-sheet/**.yml",
+      type: "page",
+      source: "cheat-sheet/**.md",
       schema: z.object({
         title: z.string(),
-        reference: z.string(),
         icon: z.string(),
-        content: z.array(
-          z.object({
-            title: z.string(),
-            reference: z.string(),
-            content: z.array(
-              z.object({
-                commands: z.array(
-                  z.object({
-                    language: z.string(),
-                    file: z.string(),
-                    icon: z.string(),
-                    code: z.string(),
-                  })
-                ),
-                description: z.string(),
-              })
-            ),
-          })
-        ),
       }),
     }),
   },

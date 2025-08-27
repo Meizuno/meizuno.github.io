@@ -80,7 +80,7 @@ export default defineAppConfig({
     tabs: {
       slots: {
         root: "gap-0",
-        list: "bg-elevated inset-shadow-md rounded-t-lg gap-1 px-2",
+        list: "bg-elevated dark:inset-shadow-md rounded-t-lg gap-1 px-2",
         indicator: "hidden",
         content: "border-s-2 border-primary",
         trigger:

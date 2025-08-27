@@ -2,7 +2,7 @@
   <div class="h-full grid grid-cols-1 lg:grid-cols-[1fr_2fr] xl:grid-cols-[2fr_5fr] gap-2">
     <div class="bg-muted py-2 px-4 lg:px-6 rounded">
       <div class="hidden lg:block sticky top-2">
-        <CheatSheetNavigation />
+        <MdNavigation />
       </div>
       <UCollapsible class="lg:hidden flex flex-col gap-2">
         <UButton
@@ -15,12 +15,12 @@
         />
 
         <template #content>
-          <CheatSheetNavigation />
+          <MdNavigation />
         </template>
       </UCollapsible>
     </div>
     <div class="relative bg-muted py-2 px-4 lg:px-6 rounded overflow-auto">
-      <CheatSheetContent />
+      <MdContent />
     </div>
   </div>
 </template>

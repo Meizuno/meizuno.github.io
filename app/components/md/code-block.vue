@@ -1,8 +1,9 @@
 <template>
-  <div class="relative bg-default rounded flex flex-col">
+  <div class="relative bg-default rounded flex flex-col my-4">
     <UTabs
       color="neutral"
       variant="link"
+      v-model="active"
       :items="commands"
       label-key="file"
       :ui="{
@@ -46,24 +47,26 @@
 import hljs from "highlight.js";
 import "highlight.js/styles/github-dark.css";
 
-const props = defineProps({
-  commands: {
-    type: Array as () => Array<{
-      file: string;
-      icon: string;
-      code: string;
-      language: string;
-    }>,
-    default: () => [],
-  },
-});
-
-const activeCommand = ref(
-  props.commands.length > 0
-    ? props.commands[0]
-    : { file: "", icon: "", code: "", language: "bash" }
+const slots = useSlots();
+const commands = computed(
+  () =>
+    slots
+      .default?.()
+      .filter((slot) => slot.props)
+      .map((slot) => {
+        return {
+          file: slot.props!.filename || "Terminal",
+          code: slot.props!.code,
+          language: slot.props!.language,
+          icon:
+            slot.props!.language !== "bash" ?
+            `i-vscode-icons-file-type-${slot.props!.language}` :
+            "i-lucide-terminal"
+        };
+      }) ?? []
 );
 
+const active = ref("0")
 const highlightCode = (code: string, language: string) => {
   return hljs.highlight(code, {
     language: language || "bash",
@@ -75,8 +78,9 @@ const colorIcon = ref<"neutral" | "primary">("neutral");
 const openTooltip = ref(false);
 
 const copy = () => {
+  const code = commands.value[Number(active.value)]?.code || ""
   colorIcon.value = "primary";
-  navigator.clipboard.writeText(activeCommand.value?.code || "").then(() => {
+  navigator.clipboard.writeText(code).then(() => {
     copyIcon.value = "i-ph-check-bold";
     openTooltip.value = true;
     setTimeout(() => {
