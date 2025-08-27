@@ -50,6 +50,13 @@ export default defineNuxtConfig({
     preview: {
       api: "https://api.nuxt.studio",
     },
+    build: {
+      markdown: {
+        toc: {
+          depth: 4,
+        }
+      }
+    }
   },
 
   site: {

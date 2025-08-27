@@ -15,16 +15,14 @@
 const cheatSheets = await queryCollection("cheatSheet").all();
 const navigation = computed(() => {
   return cheatSheets.map((cheatSheet) => {
-    console.log(cheatSheet)
     return {
       label: cheatSheet.title,
       defaultOpen: true,
       icon: cheatSheet.icon,
-      children: cheatSheet.body.value
-        .filter((value) => value[0] === "h4")
-        .map((value) => ({
-          label: value[2],
-          to: `/cheat-sheet#${value[1].id}`,
+      children: cheatSheet.body.toc!.links
+        .map((link) => ({
+          label: link.text,
+          to: `/cheat-sheet#${link.id}`,
         })),
     };
   });
