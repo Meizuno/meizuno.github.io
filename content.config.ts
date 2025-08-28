@@ -100,7 +100,10 @@ export default defineContentConfig({
     }),
     cheatSheet: defineCollection({
       type: "page",
-      source: "cheat-sheet/**.md",
+      source: {
+        include: "cheat-sheet/**.md",
+        exclude: ["cheat-sheet/.examples.md"],
+      },
       schema: z.object({
         title: z.string(),
         icon: z.string(),

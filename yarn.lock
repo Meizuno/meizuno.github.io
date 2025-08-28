@@ -625,6 +625,13 @@
     "@floating-ui/utils" "^0.2.10"
     vue-demi ">=0.13.0"
 
+"@iconify-json/vscode-icons@^1.2.30":
+  version "1.2.30"
+  resolved "https://registry.yarnpkg.com/@iconify-json/vscode-icons/-/vscode-icons-1.2.30.tgz#fbbd58a4c9461d992d7749ff0b9911bd3978ef43"
+  integrity sha512-dlTOc8w4a8/QNumZzMve+APJa6xQVXPZwo8qBk/MaYfY42NPrQT83QXkbTWKDkuEu/xgHPXvKZZBL7Yy12vYQw==
+  dependencies:
+    "@iconify/types" "*"
+
 "@iconify/collections@^1.0.563":
   version "1.0.583"
   resolved "https://registry.yarnpkg.com/@iconify/collections/-/collections-1.0.583.tgz#a71c93ccc18ef404d16acad083f656042e4df254"
