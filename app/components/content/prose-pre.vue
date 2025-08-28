@@ -1,6 +1,8 @@
 <template>
   <div class="relative flex flex-col my-4">
-    <div class="flex bg-elevated dark:bg-accented dark:inset-shadow-md rounded-t-lg gap-1 py-1 px-2">
+    <div
+      class="flex bg-elevated dark:bg-accented dark:inset-shadow-md rounded-t-lg gap-1 py-1 px-2"
+    >
       <div class="flex gap-1 px-3 py-2 items-center text-sm">
         <UIcon :name="fileIcon" class="size-5" />
         <span>{{ filename }}</span>
@@ -55,15 +57,18 @@ const html = computed(() => {
   }).value;
 });
 
-const fileIcon = computed(() => {
-  if (props.language === "bash") {
-    return "i-lucide-terminal";
-  }
+const icons = {
+  bash: "i-lucide-terminal",
+  python: "i-vscode-icons-file-type-python",
+  yarn: "i-vscode-icons-file-type-yarn",
+  npm: "i-vscode-icons-file-type-npm",
+  pnpm: "i-vscode-icons:file-type-pnpm",
+  bun: "i-vscode-icons:file-type-bun",
+};
 
-  return `i-vscode-icons-file-type-${props.language}`;
-});
-
-console.log(props, fileIcon)
+const fileIcon = computed(
+  () => icons[props.language as keyof typeof icons] ?? "i-lucide-file"
+);
 
 const copyIcon = ref("i-ph-copy-bold");
 const colorIcon = ref<"neutral" | "primary">("neutral");
