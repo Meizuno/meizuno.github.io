@@ -63,6 +63,8 @@ const fileIcon = computed(() => {
   return `i-vscode-icons-file-type-${props.language}`;
 });
 
+console.log(props, fileIcon)
+
 const copyIcon = ref("i-ph-copy-bold");
 const colorIcon = ref<"neutral" | "primary">("neutral");
 const openTooltip = ref(false);
