@@ -57,17 +57,14 @@ const html = computed(() => {
   }).value;
 });
 
-const icons = {
-  bash: "i-lucide-terminal",
-  python: "i-vscode-icons-file-type-python",
-  yarn: "i-vscode-icons-file-type-yarn",
-  npm: "i-vscode-icons-file-type-npm",
-  pnpm: "i-vscode-icons:file-type-pnpm",
-  bun: "i-vscode-icons:file-type-bun",
-};
-
 const fileIcon = computed(
-  () => icons[props.language as keyof typeof icons] ?? "i-lucide-file"
+  () => {
+    if (props.language === "bash") {
+      return "i-lucide-terminal"
+    }
+
+    return `i-vscode-icons-file-type-${props.language}`
+  }
 );
 
 const copyIcon = ref("i-ph-copy-bold");
