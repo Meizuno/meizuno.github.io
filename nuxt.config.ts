@@ -66,4 +66,8 @@ export default defineNuxtConfig({
     global: true,
     dirs: ["~/components"],
   },
+
+  icon: {
+    provider: 'server',
+  },
 });
