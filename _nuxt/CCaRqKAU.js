@@ -1,0 +1,1 @@
+import{_ as t,d as s,e as n,U as o}from"./DiU8X5T0.js";const c={},r={class:"text-toned mb-4"};function a(e,_){return n(),s("div",r,[o(e.$slots,"default")])}const i=Object.assign(t(c,[["render",a]]),{__name:"Description"});export{i as default};
