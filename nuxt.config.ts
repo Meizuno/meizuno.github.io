@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxtjs/sitemap",
     "@nuxtjs/mdc",
-    "@nuxt/icon",
   ],
   css: ["~/assets/css/main.css"],
 
@@ -66,13 +65,5 @@ export default defineNuxtConfig({
   components: {
     global: true,
     dirs: ["~/components"],
-  },
-
-  icon: {
-    clientBundle: {
-      scan: true,
-      includeCustomCollections: true, 
-      sizeLimitKb: 256,
-    },
   },
 });
