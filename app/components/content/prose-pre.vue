@@ -60,11 +60,15 @@ const html = computed(() => {
 });
 
 const fileIcon = computed(() => {
-  if (props.language === "bash") {
-    return "i-lucide-terminal";
+  switch (props.language) {
+    case "python":
+    case "py":
+      return "i-vscode-icons-file-type-python";
+    case "nuxt":
+      return "i-vscode-icons-file-type-nuxt";
+    default:
+      return "i-lucide-terminal";
   }
-
-  return `i-vscode-icons-file-type-${props.language}`;
 });
 
 const copyIcon = ref("i-ph-copy-bold");
