@@ -66,6 +66,10 @@ const fileIcon = computed(() => {
       return "i-vscode-icons-file-type-python";
     case "nuxt":
       return "i-vscode-icons-file-type-nuxt";
+    case "yarn":
+      return "i-vscode-icons-file-type-yarn";
+    case "npm":
+      return "i-vscode-icons-file-type-npm";
     default:
       return "i-lucide-terminal";
   }
