@@ -1,11 +1,13 @@
 <template>
   <div class="relative w-full my-4">
     <div
-      class="p-4 flex gap-2.5 text-sm font-medium rounded-lg info border border-dashed"
+      class="p-4 flex items-center gap-2.5 text-sm font-medium rounded-lg info border border-dashed leading-6"
       :class="typeClasses[type]"
     >
       <UIcon :name="icon" class="size-5" />
-      <slot />
+      <div>
+        <slot />
+      </div>
     </div>
     <a
       v-if="isValidUrl()"
