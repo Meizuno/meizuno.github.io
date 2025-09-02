@@ -8,8 +8,10 @@
         <span>{{ filename }}</span>
       </div>
     </div>
-    <div class="px-4 py-2 bg-default overflow-auto border-s-2 border-primary">
-      <pre><code v-html="html"></code></pre>
+    <div class="bg-default overflow-auto border-s-2 border-primary">
+      <pre
+        class="inline-block min-w-full py-2 px-4"
+      ><code v-html="html"></code></pre>
     </div>
     <div class="absolute top-2 right-2">
       <UTooltip
@@ -57,15 +59,13 @@ const html = computed(() => {
   }).value;
 });
 
-const fileIcon = computed(
-  () => {
-    if (props.language === "bash") {
-      return "i-lucide-terminal"
-    }
-
-    return `i-vscode-icons-file-type-${props.language}`
+const fileIcon = computed(() => {
+  if (props.language === "bash") {
+    return "i-lucide-terminal";
   }
-);
+
+  return `i-vscode-icons-file-type-${props.language}`;
+});
 
 const copyIcon = ref("i-ph-copy-bold");
 const colorIcon = ref<"neutral" | "primary">("neutral");
