@@ -58,13 +58,34 @@ const commands = computed(
           file: slot.props!.filename || "Terminal",
           code: slot.props!.code,
           language: slot.props!.language,
-          icon:
-            slot.props!.language !== "bash" ?
-            `i-vscode-icons-file-type-${slot.props!.language}` :
-            "i-lucide-terminal"
+          icon: fileIcon(slot.props!.language, slot.props!.filename)
         };
       }) ?? []
 );
+
+const fileIcon = (language: string, filename: string) => {
+  switch (language) {
+    case "python":
+    case "py":
+      return "i-vscode-icons-file-type-python";
+    case "nuxt":
+      return "i-vscode-icons-file-type-nuxt";
+    case "yarn":
+      return "i-vscode-icons-file-type-yarn";
+    case "npm":
+      return "i-vscode-icons-file-type-npm";
+    case "ts": {
+      if (filename === "nuxt.config.ts") {
+        return "i-vscode-icons-file-type-nuxt";
+      }
+      return "i-vscode-icons-file-type-typescript";
+    }
+    case "css":
+      return "i-vscode-icons-file-type-css";
+    default:
+      return "i-lucide-terminal";
+  }
+};
 
 const active = ref("0")
 const highlightCode = (code: string, language: string) => {

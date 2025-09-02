@@ -70,6 +70,20 @@ const fileIcon = computed(() => {
       return "i-vscode-icons-file-type-yarn";
     case "npm":
       return "i-vscode-icons-file-type-npm";
+    case "ts": {
+      if (props.filename === "nuxt.config.ts") {
+        return "i-vscode-icons-file-type-nuxt";
+      }
+      return "i-vscode-icons-file-type-typescript";
+    }
+    case "css":
+      return "i-vscode-icons-file-type-css";
+    case "html": {
+      if (props.filename?.endsWith(".vue")) {
+        return "i-vscode-icons-file-type-vue";
+      }
+      return "i-vscode-icons-file-type-html";
+    }
     default:
       return "i-lucide-terminal";
   }
