@@ -3,7 +3,7 @@
     <header
       class="bg-muted p-4 rounded flex flex-col md:flex-row justify-between gap-4"
     >
-      <AppUser class="flex-1"/>
+      <AppUser class="flex-1" />
       <USeparator class="block md:hidden" />
       <div class="flex-1 flex justify-between items-center">
         <UNavigationMenu
@@ -61,6 +61,11 @@ const items = ref<NavigationMenuItem[]>([
     label: "Cheat Sheet",
     icon: "i-streamline-manual-book",
     to: "/cheat-sheet",
+  },
+  {
+    label: "Scripts",
+    icon: "i-proicons-script",
+    to: "/scripts",
   },
 ]);
 

@@ -109,5 +109,13 @@ export default defineContentConfig({
         icon: z.string(),
       }),
     }),
+    scripts: defineCollection({
+      type: "page",
+      source: "scripts/**.md",
+      schema: z.object({
+        title: z.string(),
+        icon: z.string(),
+      }),
+    })
   },
 });
