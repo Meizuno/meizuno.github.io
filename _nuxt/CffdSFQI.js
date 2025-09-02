@@ -1,1 +1,0 @@
-import{_ as s,d as t,e as o,U as n}from"./DVyehqz6.js";const r={},c={class:"text-xl font-semibold mt-4 mb-8"};function a(e,_){return o(),t("h4",c,[n(e.$slots,"default")])}const d=Object.assign(s(r,[["render",a]]),{__name:"ProseH3"});export{d as default};
