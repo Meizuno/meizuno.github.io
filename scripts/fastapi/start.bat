@@ -59,5 +59,3 @@ echo     .\.venv\Scripts\activate
 
 echo To start FastAPI application, run:
 echo     uvicorn src.main:app --host 0.0.0.0 --port 8000
-
-REM Invoke-WebRequest "http://localhost:3000/scripts/fastapi/start.bat" -OutFile "$env:TEMP\start.bat"; cmd.exe /c "$env:TEMP\start.bat"

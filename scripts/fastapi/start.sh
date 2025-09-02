@@ -58,7 +58,3 @@ echo "    source .venv/bin/activate"
 
 echo "To start FastAPI application, run:"
 echo "    uvicorn src.main:app --host 0.0.0.0 --port 8000"
-
-# curl -sSL http://0.0.0.0:3000/scripts/fastapi/start.sh | bash
-# wget -qO- http://0.0.0.0:3000/scripts/fastapi/start.sh | bash
-
