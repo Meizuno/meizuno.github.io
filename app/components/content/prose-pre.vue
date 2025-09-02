@@ -84,6 +84,8 @@ const fileIcon = computed(() => {
       }
       return "i-vscode-icons-file-type-html";
     }
+    case "powershell":
+      return "i-vscode-icons-file-type-powershell";
     default:
       return "i-lucide-terminal";
   }

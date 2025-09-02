@@ -6,7 +6,7 @@
     >
       <UIcon :name="icon" class="size-5" />
       <div>
-        <slot />
+        <slot mdc-unwrap="p" />
       </div>
     </div>
     <a
