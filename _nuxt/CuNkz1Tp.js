@@ -1,0 +1,1 @@
+import{_ as s,d as n,e as t,U as o}from"./BfdczqJ-.js";const a={},c={class:"flex gap-1"};function r(e,_){return t(),n("div",c,[o(e.$slots,"default")])}const i=Object.assign(s(a,[["render",r]]),{__name:"ProseInline"});export{i as default};
