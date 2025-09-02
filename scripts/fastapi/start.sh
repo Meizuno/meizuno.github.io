@@ -1,15 +1,9 @@
 #!/bin/bash
 set -e
 
-# Check Python
-if ! command -v python3 &> /dev/null; then
-    echo "Python3 not installed. Verify installation using 'python3 --version'"
-    exit 1
-fi
-
 # Check if directory is empty
 if [ "$(ls -A)" ]; then
-    read -p "There are files in the current directory. Continue and perhaps overwrite them? (Y/N): " USER_CONFIRM
+    read -p "There are files in the current directory. Continue and perhaps overwrite them? (Y/N): " USER_CONFIRM < /dev/tty
     if [ "$USER_CONFIRM" != "Y" ] && [ "$USER_CONFIRM" != "y" ]; then
         echo "Canceled!"
         exit 1

@@ -1,0 +1,1 @@
+import{_ as s,d as o,e as t,W as n}from"./Bj_2PUGZ.js";const r={},a={class:"text-sm bg-default px-2 py-1 font-medium rounded-md"};function c(e,d){return t(),o("span",a,[n(e.$slots,"default")])}const f=Object.assign(s(r,[["render",c]]),{__name:"ProseCode"});export{f as default};

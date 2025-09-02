@@ -1,12 +1,6 @@
 @echo off
 setlocal enabledelayedexpansion
 
-where python >nul 2>&1
-if %ERRORLEVEL% NEQ 0 (
-    echo Python not installed. Verify installation using `python -V`
-    exit /b 1
-)
-
 REM Check root dir
 set EMPTY=1
 for /f %%A in ('dir /b') do set EMPTY=0
