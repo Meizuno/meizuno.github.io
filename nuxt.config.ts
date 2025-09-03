@@ -66,4 +66,18 @@ export default defineNuxtConfig({
     global: true,
     dirs: ["~/components"],
   },
+
+  ui: {
+    theme: {
+      colors: [
+        "primary",
+        "secondary",
+        "important",
+        "info",
+        "success",
+        "warning",
+        "error",
+      ],
+    },
+  },
 });

@@ -1,13 +1,11 @@
 <template>
   <div class="relative w-full my-4">
     <div
-      class="p-4 flex items-center gap-2.5 text-sm font-medium rounded-lg info border border-dashed leading-6"
+      class="p-4 text-sm font-medium rounded-lg info border border-dashed leading-6"
       :class="typeClasses[type]"
     >
-      <UIcon :name="icon" class="size-5" />
-      <div>
-        <slot mdc-unwrap="p" />
-      </div>
+      <UIcon :name="icon" class="align-sub size-5 mr-1.5" />
+      <slot mdc-unwrap="p" />
     </div>
     <a
       v-if="isValidUrl()"
@@ -28,7 +26,9 @@
 <script setup lang="ts">
 const props = defineProps({
   type: {
-    type: String as PropType<"info" | "warning" | "success" | "error">,
+    type: String as PropType<
+      "info" | "warning" | "success" | "error" | "important"
+    >,
     default: "info",
   },
   to: {
@@ -42,6 +42,7 @@ const iconMap: Record<typeof props.type, string> = {
   warning: "i-lucide-alert-triangle",
   success: "i-lucide-lightbulb",
   error: "i-lucide-circle-alert",
+  important: "i-lucide-info",
 };
 
 const typeClasses: Record<typeof props.type, string> = {
@@ -49,6 +50,7 @@ const typeClasses: Record<typeof props.type, string> = {
   warning: "bg-warning/10 border-warning/25 text-warning",
   success: "bg-success/10 border-success/25 text-success",
   error: "bg-error/10 border-error/25 text-error",
+  important: "bg-important/10 border-important/25 text-important",
 };
 
 const hoverClasses: Record<typeof props.type, string> = {
@@ -56,6 +58,7 @@ const hoverClasses: Record<typeof props.type, string> = {
   warning: "hover:border-warning",
   success: "hover:border-success",
   error: "hover:border-error",
+  important: "hover:border-important",
 };
 
 const icon = computed(() => iconMap[props.type]);

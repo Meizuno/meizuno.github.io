@@ -15,9 +15,7 @@
       }"
     >
       <template #content="{ item }">
-        <div class="px-4 py-2 overflow-auto">
-          <pre><code v-html="highlightCode(item.code, item.language)"></code></pre>
-        </div>
+        <CodeBlock :code="item.code" :language="item.language" />
       </template>
     </UTabs>
 
@@ -45,7 +43,6 @@
 
 <script setup lang="ts">
 import hljs from "highlight.js";
-import "highlight.js/styles/github-dark.css";
 
 const slots = useSlots();
 const commands = computed(

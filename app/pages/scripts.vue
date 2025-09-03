@@ -40,7 +40,7 @@
       </UCollapsible>
     </div>
     <div class="bg-muted py-2 px-4 lg:px-6 rounded overflow-auto">
-      <div class="flex flex-col">
+      <div class="flex flex-col gap-4">
         <div class="flex flex-col" v-for="script in scripts">
           <div>
             <h2 class="text-2xl font-semibold my-2 flex gap-2 items-center">

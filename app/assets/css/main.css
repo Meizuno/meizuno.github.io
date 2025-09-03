@@ -1,5 +1,7 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+@import "highlight.js/styles/github-dark.css";
+
 
 @theme {
   --container-8xl: 90rem;
@@ -8,6 +10,26 @@
 
 :root {
   --ui-container: var(--container-8xl);
+
+  --ui-color-important-50: var(--color-violet-50, oklch(96.9% 0.016 293.756));
+  --ui-color-important-100: var(--color-violet-100, oklch(94.3% 0.029 294.588));
+  --ui-color-important-200: var(--color-violet-200, oklch(89.4% 0.057 293.283));
+  --ui-color-important-300: var(--color-violet-300, oklch(81.1% 0.111 293.571));
+  --ui-color-important-400: var(--color-violet-400, oklch(70.2% 0.183 293.541));
+  --ui-color-important-500: var(--color-violet-500, oklch(60.6% 0.25 292.717));
+  --ui-color-important-600: var(--color-violet-600, oklch(54.1% 0.281 293.009));
+  --ui-color-important-700: var(--color-violet-700, oklch(49.1% 0.27 292.581));
+  --ui-color-important-800: var(--color-violet-800, oklch(43.2% 0.232 292.759));
+  --ui-color-important-900: var(--color-violet-900, oklch(38% 0.189 293.745));
+  --ui-color-important-950: var(--color-violet-950, oklch(28.3% 0.141 291.089));
+}
+
+:root, .light {
+  --ui-important: var(--ui-color-important-500);
+}
+
+.dark {
+  --ui-important: var(--ui-color-important-400);
 }
 
 @layer utilities {

@@ -82,7 +82,6 @@ export default defineAppConfig({
         root: "gap-0",
         list: "bg-elevated dark:bg-accented dark:inset-shadow-md rounded-t-lg gap-1 px-2",
         indicator: "hidden",
-        content: "border-s-2 border-primary",
         trigger:
           "data-[state=inactive]:text-default hover:data-[state=inactive]:not-disabled:bg-default",
       },

@@ -8,11 +8,7 @@
         <span>{{ filename }}</span>
       </div>
     </div>
-    <div class="bg-default overflow-auto border-s-2 border-primary">
-      <pre
-        class="inline-block min-w-full py-2 px-4"
-      ><code v-html="html"></code></pre>
-    </div>
+    <CodeBlock :code="code" :language="language" />
     <div class="absolute top-2 right-2">
       <UTooltip
         :open="openTooltip"
@@ -36,9 +32,6 @@
 </template>
 
 <script setup lang="ts">
-import hljs from "highlight.js";
-import "highlight.js/styles/github-dark.css";
-
 const props = defineProps({
   code: {
     type: String,
@@ -51,12 +44,6 @@ const props = defineProps({
   filename: {
     type: String,
   },
-});
-
-const html = computed(() => {
-  return hljs.highlight(props.code, {
-    language: props.language,
-  }).value;
 });
 
 const fileIcon = computed(() => {
