@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+NC='\033[0m'
+
 # Check if directory is empty
 if [ "$(ls -A . 2>/dev/null)" != "" ]; then
     read -p "There are files in the current directory. Continue and perhaps overwrite them? (Y/N): " USER_CONFIRM < /dev/tty
@@ -11,7 +16,7 @@ if [ "$(ls -A . 2>/dev/null)" != "" ]; then
 fi
 
 # Get project name
-read -p "Project name: " USER_INPUT < /dev/tty
+read -p "$(printf "${BLUE}Project name:${NC} ")" USER_INPUT < /dev/tty
 
 # Delete needed files
 [ -d ".venv" ] && rm -rf .venv
@@ -38,12 +43,13 @@ mkdir -p src
 # Generate project
 django-admin startproject $USER_INPUT src
 
-echo
-echo "To activate virtual environment, run:"
-echo "    source .venv/bin/activate"
+echo -e "\n${GREEN}Django Start App generated successfully${NC}\n"
 
-echo "Open source directory, run:"
-echo "    cd src"
+echo -e "${GREEN}To activate virtual environment, run:${NC}"
+echo -e "    ${BLUE}source .venv/bin/activate${NC}"
 
-echo "To start Django application, run:"
-echo "    python manage.py runserver"
+echo -e "${GREEN}Open source directory, run:${NC}"
+echo -e "    ${BLUE}cd src${NC}"
+
+echo -e "${GREEN}To start Django application, run:${NC}"
+echo -e "    ${BLUE}python manage.py runserver${NC}"
