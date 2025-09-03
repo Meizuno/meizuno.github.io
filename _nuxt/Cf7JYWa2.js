@@ -1,1 +1,0 @@
-import{_ as s,d as t,e as o,W as n}from"./BFX9fWae.js";const r={},c={class:"text-toned mb-4"};function a(e,_){return o(),t("div",c,[n(e.$slots,"default")])}const l=Object.assign(s(r,[["render",a]]),{__name:"ProseP"});export{l as default};
