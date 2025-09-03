@@ -38,7 +38,7 @@ onMounted(async () => {
   try {
     const response = await fetch(props.source);
     if (!response.ok) throw new Error("Failed to fetch file");
-    code.value = await response.text()
+    code.value = await response.text();
   } catch (err) {
     console.error(err);
   }

@@ -55,7 +55,7 @@ const commands = computed(
           file: slot.props!.filename || "Terminal",
           code: slot.props!.code,
           language: slot.props!.language,
-          icon: fileIcon(slot.props!.language, slot.props!.filename)
+          icon: fileIcon(slot.props!.language, slot.props!.filename),
         };
       }) ?? []
 );
@@ -84,7 +84,7 @@ const fileIcon = (language: string, filename: string) => {
   }
 };
 
-const active = ref("0")
+const active = ref("0");
 const highlightCode = (code: string, language: string) => {
   return hljs.highlight(code, {
     language: language || "bash",
@@ -96,7 +96,7 @@ const colorIcon = ref<"neutral" | "primary">("neutral");
 const openTooltip = ref(false);
 
 const copy = () => {
-  const code = commands.value[Number(active.value)]?.code || ""
+  const code = commands.value[Number(active.value)]?.code || "";
   colorIcon.value = "primary";
   navigator.clipboard.writeText(code).then(() => {
     copyIcon.value = "i-ph-check-bold";
