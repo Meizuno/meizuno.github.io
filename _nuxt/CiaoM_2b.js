@@ -1,1 +1,0 @@
-import{_ as s,d as r,e as t,W as n}from"./Bj_2PUGZ.js";const o={};function a(e,c){return t(),r("th",null,[n(e.$slots,"default")])}const l=Object.assign(s(o,[["render",a]]),{__name:"ProseTh"});export{l as default};

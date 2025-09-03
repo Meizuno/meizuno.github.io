@@ -1,6 +1,10 @@
 #!/bin/bash
 set -e
 
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+NC='\033[0m'
+
 # Check if directory is empty
 if [ "$(ls -A)" ]; then
     read -p "There are files in the current directory. Continue and perhaps overwrite them? (Y/N): " USER_CONFIRM < /dev/tty
@@ -45,10 +49,10 @@ def read_root():
     return {"message": "Hello, FastAPI!"}
 EOF
 
-echo "FastAPI Start App generated successfully"
+echo -e "\n${GREEN}FastAPI Start App generated successfully${NC}\n"
 
-echo "To activate virtual environment, run:"
-echo "    source .venv/bin/activate"
+echo -e "${GREEN}To activate virtual environment, run:${NC}"
+echo -e "    ${BLUE}source .venv/bin/activate${NC}"
 
-echo "To start FastAPI application, run:"
-echo "    uvicorn src.main:app --host 0.0.0.0 --port 8000"
+echo -e "${GREEN}To start FastAPI application, run:${NC}"
+echo -e "    ${BLUE}uvicorn src.main:app --host 0.0.0.0 --port 8000${NC}"
