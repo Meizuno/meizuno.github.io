@@ -6,19 +6,19 @@ setlocal enabledelayedexpansion
 echo.
 echo Running pip-audit...
 echo.
-.\.venv\Scripts\python.exe -m pip-audit -r requirements.txt
+.\.venv\Scripts\pip-audit.exe -r requirements.txt
 
 echo.
 echo Installed licenses:
 echo.
-.\.venv\Scripts\python.exe -m pip-licenses
+.\.venv\Scripts\pip-licenses.exe
 
 echo.
 echo Running bandit security checks...
 echo.
-.\.venv\Scripts\python.exe -m bandit -r src
+.\.venv\Scripts\bandit.exe -r src
 
 echo.
 echo Checking spelling with codespell...
 echo.
-.\.venv\Scripts\python.exe -m codespell src
+.\.venv\Scripts\codespell.exe src

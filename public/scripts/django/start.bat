@@ -35,7 +35,7 @@ REM Create project structure
 mkdir src
 
 REM Generate project
-django-admin startproject %USER_INPUT% src
+.\.venv\Scripts\django-admin.exe startproject %USER_INPUT% src
 
 echo.
 echo To activate virtual environment, run:
