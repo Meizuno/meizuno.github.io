@@ -22,10 +22,10 @@ jobs:
 
       - name: Build Docker image
         run: |
-          IMAGE_NAME=ghcr.io/meizuno/portfolio | cut -d'/' -f2)
+          IMAGE_NAME=ghcr.io/meizuno/portfolio
           docker build -t $IMAGE_NAME:latest .
 
       - name: Push Docker image
         run: |
-          IMAGE_NAME=ghcr.io/meizuno/portfolio | cut -d'/' -f2)
+          IMAGE_NAME=ghcr.io/meizuno/portfolio
           docker push $IMAGE_NAME:latest
