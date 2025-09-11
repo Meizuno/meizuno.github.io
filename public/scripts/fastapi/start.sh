@@ -49,7 +49,6 @@ app = FastAPI()
 @app.get("/")
 def read_root():
     return {"message": "Hello, FastAPI!"}
-
 EOF
 
 # Generate logger.py
@@ -71,8 +70,7 @@ structlog.configure(
     logger_factory=structlog.PrintLoggerFactory(),
     cache_logger_on_first_use=False
 )
-log = structlog.get_logger()
-
+logger = structlog.get_logger()
 EOF
 
 echo -e "\n${GREEN}FastAPI Start App generated successfully${NC}\n"
