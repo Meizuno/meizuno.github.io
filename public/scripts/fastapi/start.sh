@@ -25,15 +25,17 @@ python3 -m venv .venv
 # Activate virtual environment
 source .venv/bin/activate
 pip install --upgrade pip
-pip install fastapi uvicorn
+pip install fastapi uvicorn structlog
 
 # Get packages versions
 FASTAPI_VERSION=$(pip show fastapi | grep Version | awk '{print $2}')
 UVICORN_VERSION=$(pip show uvicorn | grep Version | awk '{print $2}')
+STRUCTLOG_VERSION=$(pip show structlog | grep Version | awk '{print $2}')
 
 # Generate requirements.txt
 echo "fastapi==$FASTAPI_VERSION" > requirements.txt
 echo "uvicorn==$UVICORN_VERSION" >> requirements.txt
+echo "structlog==$STRUCTLOG_VERSION" >> requirements.txt
 
 # Create project structure
 mkdir -p src
@@ -47,6 +49,30 @@ app = FastAPI()
 @app.get("/")
 def read_root():
     return {"message": "Hello, FastAPI!"}
+
+EOF
+
+# Generate logger.py
+cat > src/logger.py << EOF
+import logging
+import structlog
+
+structlog.configure(
+    processors=[
+        structlog.contextvars.merge_contextvars,
+        structlog.processors.add_log_level,
+        structlog.processors.StackInfoRenderer(),
+        structlog.dev.set_exc_info,
+        structlog.processors.TimeStamper(fmt="%Y-%m-%d %H:%M:%S", utc=False),
+        structlog.dev.ConsoleRenderer()
+    ],
+    wrapper_class=structlog.make_filtering_bound_logger(logging.NOTSET),
+    context_class=dict,
+    logger_factory=structlog.PrintLoggerFactory(),
+    cache_logger_on_first_use=False
+)
+log = structlog.get_logger()
+
 EOF
 
 echo -e "\n${GREEN}FastAPI Start App generated successfully${NC}\n"
