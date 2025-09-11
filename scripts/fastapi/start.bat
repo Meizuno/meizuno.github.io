@@ -46,7 +46,6 @@ echo.>> main.py
 echo @app.get("/") >> main.py
 echo def read_root(): >> main.py
 echo     return {"message": "Hello, FastAPI!"} >> main.py
-echo.>> main.py
 
 REM Generate logger.py
 echo import logging >> logger.py
@@ -66,8 +65,7 @@ echo     context_class=dict, >> logger.py
 echo     logger_factory=structlog.PrintLoggerFactory(), >> logger.py
 echo     cache_logger_on_first_use=False >> logger.py
 echo ) >> logger.py
-echo log = structlog.get_logger() >> logger.py
-echo.>> logger.py
+echo logger = structlog.get_logger() >> logger.py
 
 cd ..
 
