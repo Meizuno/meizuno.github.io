@@ -1,5 +1,17 @@
 <template>
   <UContainer class="py-2 flex flex-col gap-2">
+    <Transition name="fade">
+      <div
+        v-if="isLoading"
+        class="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50"
+      >
+        <div class="flex flex-col items-center gap-4 text-primary">
+          <UIcon name="i-lucide-loader-2" class="animate-spin w-12 h-12" />
+          <span class="text-lg font-medium">Generating PDF...</span>
+        </div>
+      </div>
+    </Transition>
+
     <header
       class="bg-muted p-4 rounded flex flex-col md:flex-row justify-between gap-4"
     >
@@ -21,9 +33,9 @@
             color="neutral"
             variant="ghost"
             size="xl"
-            to="/yurii-myronov.pdf"
             target="_blank"
             class="hover:bg-default"
+            @click="handleDownload"
           />
           <ClientOnly v-if="!colorMode?.forced">
             <UButton
@@ -79,4 +91,24 @@ const isDark = computed({
     colorMode.preference = _isDark ? "dark" : "light";
   },
 });
+
+const isLoading = ref(false);
+async function handleDownload() {
+  const isServer = import.meta.env.SSR;
+  const pdfUrl = "/yurii-myronov.pdf";
+
+  if (isServer || import.meta.env.DEV) {
+    try {
+      isLoading.value = true;
+      await $fetch("/api/pdf");
+      window.open(pdfUrl, "_blank");
+    } catch (err) {
+      console.error("PDF generation failed:", err);
+    } finally {
+      isLoading.value = false;
+    }
+  } else {
+    window.open(pdfUrl, "_blank");
+  }
+}
 </script>
