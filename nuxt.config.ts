@@ -8,7 +8,6 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "@nuxtjs/sitemap",
     "@nuxtjs/mdc",
-    "nitro-cloudflare-dev",
   ],
   css: ["~/assets/css/main.css"],
 
@@ -66,14 +65,6 @@ export default defineNuxtConfig({
   components: {
     global: true,
     dirs: ["~/components"],
-  },
-
-  nitro: {
-    preset: "cloudflare_module",
-    cloudflare: {
-      deployConfig: true,
-      nodeCompat: true
-    }
   },
 
   ui: {
