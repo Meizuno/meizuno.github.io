@@ -94,21 +94,6 @@ const isDark = computed({
 
 const isLoading = ref(false);
 async function handleDownload() {
-  const isServer = import.meta.env.SSR;
-  const pdfUrl = "/yurii-myronov.pdf";
-
-  if (isServer || import.meta.env.DEV) {
-    try {
-      isLoading.value = true;
-      await $fetch("/api/pdf");
-      window.open(pdfUrl, "_blank");
-    } catch (err) {
-      console.error("PDF generation failed:", err);
-    } finally {
-      isLoading.value = false;
-    }
-  } else {
-    window.open(pdfUrl, "_blank");
-  }
+  window.open("/yurii-myronov.pdf", "_blank");
 }
 </script>
