@@ -47,6 +47,7 @@ export default defineNuxtConfig({
 
   ignore: ["scripts"],
   content: {
+    experimental: { nativeSqlite: true },
     preview: {
       api: "https://api.nuxt.studio",
     },
