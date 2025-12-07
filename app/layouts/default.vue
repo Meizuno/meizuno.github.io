@@ -13,7 +13,7 @@
     </Transition>
 
     <header
-      class="bg-muted p-4 rounded flex flex-col md:flex-row justify-between gap-4"
+      class="bg-elevated p-4 rounded flex flex-col md:flex-row justify-between gap-4"
     >
       <AppUser class="flex-1" />
       <USeparator class="block md:hidden" />
@@ -28,24 +28,28 @@
           }"
         />
         <div class="flex items-center">
-          <UButton
-            icon="i-lucide-download"
-            color="neutral"
-            variant="ghost"
-            size="xl"
-            target="_blank"
-            class="hover:bg-default"
-            @click="handleDownload"
-          />
-          <ClientOnly v-if="!colorMode?.forced">
+          <UTooltip text="Download CV">
             <UButton
-              :icon="isDark ? 'i-lucide-sun' : 'i-lucide-moon'"
+              icon="i-lucide-download"
               color="neutral"
               variant="ghost"
               size="xl"
+              target="_blank"
               class="hover:bg-default"
-              @click="isDark = !isDark"
+              @click="handleDownload"
             />
+          </UTooltip>
+          <ClientOnly v-if="!colorMode?.forced">
+            <UTooltip text="Switch theme">
+              <UButton
+                :icon="isDark ? 'i-lucide-sun' : 'i-lucide-moon'"
+                color="neutral"
+                variant="ghost"
+                size="xl"
+                class="hover:bg-default"
+                @click="isDark = !isDark"
+              />
+            </UTooltip>
 
             <template #fallback>
               <div class="size-8" />
