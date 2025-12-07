@@ -47,7 +47,7 @@
     "Django, FastAPI",
     "Javascript / Typescript",
     "Nuxt UI (Vue, Tailwind)",
-    "Docker (Network, Compose, Volumes)",
+    "Docker (Swarm, Compose, Volumes)",
     "Tauri (IOS, Android, Windows)"
   ],
   "languages": [
