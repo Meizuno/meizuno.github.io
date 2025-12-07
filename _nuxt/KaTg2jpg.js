@@ -1,0 +1,1 @@
+import{_ as s,e as t,f as o,X as c}from"./r87NNr1M.js";const r={},n={class:"list-disc ps-6 my-3"};function a(e,l){return o(),t("ul",n,[c(e.$slots,"default")])}const f=Object.assign(s(r,[["render",a]]),{__name:"ProseUl"});export{f as default};

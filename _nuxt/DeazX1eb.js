@@ -1,0 +1,1 @@
+import{z as r,J as n,e as c,f as p,X as u,n as m,a8 as s}from"./r87NNr1M.js";const i={base:"list-decimal ps-6 my-5 marker:text-muted"},_={__name:"ProseOl",props:{class:{type:null,required:!1}},setup(e){const a=e,t=r(),o=n(()=>s({extend:s(i),...t.ui?.prose?.ol||{}}));return(l,d)=>(p(),c("ol",{class:m(o.value({class:a.class}))},[u(l.$slots,"default")],2))}};export{_ as default};
