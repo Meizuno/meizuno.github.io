@@ -16,14 +16,12 @@
 </template>
 
 <script setup lang="ts">
-const { data: skills } = await useAsyncData("skills", async () => {
-  const data = await queryCollection("home").select("skills").first();
-  return data?.skills ?? [];
-});
+const data = await queryCollection("home").select("skills").first();
+const skills = data?.skills ?? [];
 
-const skillValue = ref(skills.value?.map(() => 0) || []);
+const skillValue = ref(skills?.map(() => 0) || []);
 
 onMounted(() => {
-  skillValue.value = skills.value?.map((skill) => skill.value) || [];
+  skillValue.value = skills?.map((skill) => skill.value) || [];
 });
 </script>

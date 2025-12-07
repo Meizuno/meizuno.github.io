@@ -34,8 +34,6 @@ defineProps({
   },
 });
 
-const { data: apps } = await useAsyncData("application", async () => {
-  const data = await queryCollection("home").select("application").first();
-  return data?.application ?? [];
-});
+const data = await queryCollection("home").select("application").first();
+const apps = data?.application ?? [];
 </script>

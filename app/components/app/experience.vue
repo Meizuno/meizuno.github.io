@@ -43,13 +43,11 @@
 </template>
 
 <script setup lang="ts">
-const { data: experiences } = await useAsyncData("experience", async () => {
-  const data = await queryCollection("home").select("experience").first();
-  return data?.experience ?? [];
-});
+const data = await queryCollection("home").select("experience").first();
+const experiences = data?.experience ?? [];
 
 const items = computed(() =>
-  experiences.value?.map((experience) => ({
+  experiences?.map((experience) => ({
     ...experience,
     duration: getDuration(experience.start, experience.end),
     roles: experience.roles.map((role) => ({

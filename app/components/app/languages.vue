@@ -69,10 +69,8 @@ const c = computed(() => size / 2);
 const r = computed(() => size / 2 - stroke / 2);
 const circ = computed(() => 2 * Math.PI * r.value);
 
-const { data: languages } = await useAsyncData("languages", async () => {
-  const data = await queryCollection("home").select("languages").first();
-  return data?.languages ?? [];
-});
+const data = await queryCollection("home").select("languages").first();
+const languages = data?.languages ?? [];
 
 onMounted(async () => {
   document.querySelectorAll<SVGAnimateElement>("#anim").forEach(anim => {

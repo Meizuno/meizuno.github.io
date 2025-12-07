@@ -21,13 +21,11 @@
 </template>
 
 <script setup lang="ts">
-const { data: educations } = await useAsyncData("education", async () => {
-  const data = await queryCollection("home").select("education").first();
-  return data?.education ?? [];
-});
+const data = await queryCollection("home").select("education").first();
+const educations = data?.education ?? [];
 
 const items = computed(() =>
-  educations.value?.map((education) => ({
+  educations?.map((education) => ({
     ...education,
     startFormatted: formatDate(education.start),
     endFormatted: formatDate(education.end),

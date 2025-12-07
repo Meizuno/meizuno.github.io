@@ -7,8 +7,6 @@
 </template>
 
 <script setup lang="ts">
-const { data: about } = await useAsyncData("about", async () => {
-  const data = await queryCollection("home").select("about").first();
-  return data?.about ?? "";
-});
+const data = await queryCollection("home").select("about").first();
+const about = data?.about ?? "";
 </script>

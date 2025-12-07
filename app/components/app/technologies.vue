@@ -17,8 +17,6 @@
 </template>
 
 <script setup lang="ts">
-const { data: technologies } = await useAsyncData("technologies", async () => {
-  const data = await queryCollection("home").select("technologies").first();
-  return data?.technologies ?? [];
-});
+const data = await queryCollection("home").select("technologies").first();
+const technologies = data?.technologies ?? [];
 </script>

@@ -17,8 +17,6 @@
 </template>
 
 <script setup lang="ts">
-const { data: contacts } = await useAsyncData("contact", async () => {
-  const data = await queryCollection("home").select("contact").first();
-  return data?.contact ?? [];
-});
+const data = await queryCollection("home").select("contact").first();
+const contacts = data?.contact ?? [];
 </script>

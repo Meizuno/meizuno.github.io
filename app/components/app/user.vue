@@ -17,7 +17,5 @@
 </template>
 
 <script setup lang="ts">
-const { data: user } = await useAsyncData("user", () => {
-  return queryCollection("user").first();
-});
+const user = await queryCollection("user").first();
 </script>

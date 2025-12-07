@@ -55,13 +55,11 @@
 </template>
 
 <script setup lang="ts">
-const { data: projects } = await useAsyncData("project", async () => {
-  const data = await queryCollection("home").select("project").first();
-  return data?.project ?? [];
-});
+const data = await queryCollection("home").select("project").first();
+const projects = data?.project ?? [];
 
 const items = computed(() =>
-  projects.value?.map((project) => ({
+  projects?.map((project) => ({
     ...project,
     duration: getDuration(project.start, project.end),
   }))
