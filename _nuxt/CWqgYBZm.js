@@ -1,1 +1,0 @@
-import{aD as o}from"./r87NNr1M.js";function l(t,e){if(typeof t!="object"||t===null)return!1;const n=o(t,e);return n!=null&&n!==""}function u(t,e){return e?{xs:44,sm:48,md:52,lg:56,xl:60}[t]:{xs:24,sm:28,md:32,lg:36,xl:40}[t]}function f(t,e,n){const r=n?t.some(s=>l(s,n)):!1;return u(e,r)}export{f as g};

@@ -1,0 +1,1 @@
+import e from"./o1zAbbgG.js";import{_ as o,W as s,f as c}from"./BTXGmdcq.js";import"./CyYjCAZZ.js";const t={};function n(_,a){const r=e;return c(),s(r,{size:"xs",class:"my-8"})}const i=Object.assign(o(t,[["render",n]]),{__name:"ProseHr"});export{i as default};

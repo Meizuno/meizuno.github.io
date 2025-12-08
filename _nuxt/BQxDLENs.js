@@ -1,0 +1,1 @@
+import{_ as s,e as o,f as t,X as n}from"./BTXGmdcq.js";const r={},a={class:"text-sm bg-default px-2 py-1 font-medium rounded-md"};function c(e,d){return t(),o("span",a,[n(e.$slots,"default")])}const f=Object.assign(s(r,[["render",c]]),{__name:"ProseCode"});export{f as default};

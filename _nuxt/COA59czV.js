@@ -1,0 +1,1 @@
+import{_ as s,e as t,f as o,X as n}from"./BTXGmdcq.js";const r={},c={class:"text-toned mb-4"};function a(e,_){return o(),t("div",c,[n(e.$slots,"default")])}const f=Object.assign(s(r,[["render",a]]),{__name:"ProseP"});export{f as default};
