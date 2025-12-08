@@ -14,7 +14,7 @@
                 :to="contact.to"
                 color="neutral"
                 variant="outline"
-                class="hover:bg-default w-full"
+                class="bg-muted w-full"
               />
             </div>
           </div>
