@@ -5,7 +5,7 @@ COPY package.json yarn.lock ./
 RUN yarn install
 COPY . .
 
-RUN yarn build
+RUN NODE_OPTIONS="--max-old-space-size=8192" yarn build
 
 FROM node:22-slim AS runner
 
