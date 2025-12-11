@@ -27,6 +27,12 @@ jobs:
     - name: Generate PDF
       run: yarn pdf
 
+    - name: Set Git user
+      run: |
+        git config --global user.name "Yurii Myronov"
+        git config --global user.email "yuramiron16@gmail.com"
+
+
     - name: Push generated PDF
       run: |
         git add public/yurii-myronov.pdf
