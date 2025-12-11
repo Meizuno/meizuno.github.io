@@ -27,6 +27,8 @@ jobs:
     - name: Generate PDF
       run: yarn pdf
 
-    - name: test
-      run: git status
-    
+    - name: Push generated PDF
+      run: |
+        git add public/yurii-myronov.pdf
+        git commit -m "update pdf"
+        git push
