@@ -2,7 +2,7 @@
   <AppBlock title="Skills">
     <div class="flex flex-col gap-6">
       <div v-for="(skill, index) in skills" :key="index" class="flex flex-col">
-        <div class="flex justify-between text-muted">
+        <div class="flex justify-between app-soft">
           <ULink :to="skill.to" target="_blank" class="flex gap-1">
             <span class="font-semibold">{{ skill.label }}</span>
             <UIcon name="i-heroicons-outline-external-link" class="size-3" />

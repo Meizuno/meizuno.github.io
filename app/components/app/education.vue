@@ -11,7 +11,7 @@
         <div class="flex flex-col text-sm">
           <h4 class="text-xl font-semibold">{{ item.institution }}</h4>
           <span>{{ item.degree }}</span>
-          <span class="text-muted">
+          <span class="app-soft">
             {{ item.startFormatted }} - {{ item.endFormatted }}
           </span>
         </div>

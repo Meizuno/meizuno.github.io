@@ -1,6 +1,6 @@
 <template>
   <AppBlock title="Technologies">
-    <div class="flex flex-col gap-4 text-muted font-semibold">
+    <div class="flex flex-col gap-4 app-soft font-semibold">
       <div
         v-for="(technology, index) in technologies"
         :key="index"

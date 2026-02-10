@@ -18,7 +18,7 @@
                 app.tag
               }}</UBadge>
             </div>
-            <span class="text-muted">{{ app.description }}</span>
+            <span class="app-soft">{{ app.description }}</span>
           </div>
         </ULink>
       </div>

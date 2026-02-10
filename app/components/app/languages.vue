@@ -4,7 +4,7 @@
       <div
         v-for="(lang, index) in languages"
         :key="index"
-        class="flex flex-col items-center gap-2 text-muted"
+        class="flex flex-col items-center gap-2 app-soft"
       >
         <svg
           :width="size"

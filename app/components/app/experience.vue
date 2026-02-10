@@ -11,10 +11,10 @@
           />
           <div class="flex flex-col text-sm">
             <h4 class="text-xl font-semibold">{{ item.company }}</h4>
-            <span class="text-muted"
+            <span class="app-soft"
               >{{ item.format }} • {{ item.duration }}</span
             >
-            <span class="text-muted">{{ item.location }}</span>
+            <span class="app-soft">{{ item.location }}</span>
           </div>
         </ULink>
         <div class="flex flex-col gap-8 ml-4">
@@ -26,14 +26,14 @@
               size="sm"
               class="absolute left-1.75 top-7.5 h-full"
             />
-            <UIcon name="i-icon-park-outline-dot" class="text-muted mt-1.5" />
+            <UIcon name="i-icon-park-outline-dot" class="app-soft mt-1.5" />
             <div class="flex flex-col text-sm">
               <h5 class="text-lg font-medium">{{ role.title }}</h5>
-              <span class="text-muted">
+              <span class="app-soft">
                 {{ role.startFormatted }} - {{ role.endFormatted }} •
                 {{ role.duration }}
               </span>
-              <span class="text-muted">{{ role.format }}</span>
+              <span class="app-soft">{{ role.format }}</span>
             </div>
           </div>
         </div>

@@ -1,6 +1,6 @@
 <template>
   <AppBlock v-if="about" title="About me">
-    <div class="font-semibold text-justify">
+    <div class="text-base leading-relaxed text-justify app-soft">
       {{ about }}
     </div>
   </AppBlock>

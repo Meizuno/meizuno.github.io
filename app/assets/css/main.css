@@ -1,7 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Space+Grotesk:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
 @import "@nuxt/ui";
 @import "highlight.js/styles/github-dark.css";
-
 
 @theme {
   --container-8xl: 90rem;
@@ -10,6 +10,18 @@
 
 :root {
   --ui-container: var(--container-8xl);
+
+  --app-bg: #eef2f7;
+  --app-bg-muted: #e3e9f1;
+  --app-surface: #f9fbff;
+  --app-surface-2: #e9eff7;
+  --app-border: #c8d2e1;
+  --app-ink: #1b2433;
+  --app-ink-muted: #5a677a;
+  --app-accent: #0b6b82;
+  --app-accent-2: #7a3b5d;
+  --app-shadow: 0 24px 40px -30px rgba(11, 20, 34, 0.6);
+  --app-radius: 22px;
 
   --ui-color-important-50: var(--color-violet-50, oklch(96.9% 0.016 293.756));
   --ui-color-important-100: var(--color-violet-100, oklch(94.3% 0.029 294.588));
@@ -24,12 +36,61 @@
   --ui-color-important-950: var(--color-violet-950, oklch(28.3% 0.141 291.089));
 }
 
-:root, .light {
+:root,
+.light {
   --ui-important: var(--ui-color-important-500);
 }
 
 .dark {
   --ui-important: var(--ui-color-important-400);
+  --app-bg: #0f141b;
+  --app-bg-muted: #131a24;
+  --app-surface: #151d28;
+  --app-surface-2: #1a2432;
+  --app-border: #273243;
+  --app-ink: #e7edf6;
+  --app-ink-muted: #a7b4c7;
+  --app-accent: #7dd0e4;
+  --app-accent-2: #d69bb7;
+  --app-shadow: 0 24px 40px -30px rgba(0, 0, 0, 0.8);
+}
+
+@layer base {
+  html {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    color: var(--app-ink);
+    background-color: var(--app-bg);
+  }
+
+  body {
+    background:
+      radial-gradient(1200px 900px at 10% -10%, #c7d8f1 0%, transparent 60%),
+      radial-gradient(900px 700px at 110% 15%, #d9c7eb 0%, transparent 60%),
+      radial-gradient(700px 600px at 50% 120%, #c6e1e3 0%, transparent 60%),
+      var(--app-bg);
+    min-height: 100vh;
+  }
+
+  .dark body {
+    background:
+      radial-gradient(1100px 800px at 8% -12%, rgba(24, 48, 90, 0.22) 0%, transparent 62%),
+      radial-gradient(900px 700px at 115% 5%, rgba(20, 64, 70, 0.2) 0%, transparent 62%),
+      radial-gradient(800px 600px at 45% 115%, rgba(52, 38, 88, 0.2) 0%, transparent 62%),
+      var(--app-bg);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Fraunces", Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+
+  a {
+    color: var(--app-accent);
+  }
 }
 
 @layer utilities {
@@ -41,11 +102,57 @@
     display: none;
   }
 
+  .app-shell {
+    background: linear-gradient(140deg, var(--app-surface) 0%, #ffffff 52%, var(--app-surface-2) 100%);
+    border: 1px solid var(--app-border);
+    border-radius: var(--app-radius);
+    box-shadow: var(--app-shadow);
+  }
+
+  .dark .app-shell {
+    background:
+      linear-gradient(140deg, #121924 0%, #182232 52%, #1a2536 100%);
+    border: 1px solid var(--app-border);
+  }
+
+  .app-panel {
+    background: var(--app-surface);
+    border: 1px solid var(--app-border);
+    border-radius: 18px;
+  }
+
+  .app-panel-muted {
+    background: var(--app-surface-2);
+    border: 1px solid var(--app-border);
+    border-radius: 18px;
+  }
+
+  .app-title {
+    font-size: clamp(1.4rem, 2vw, 2.1rem);
+  }
+
+  .app-kicker {
+    font-family: "Space Grotesk", system-ui, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.72rem;
+    color: var(--app-ink-muted);
+  }
+
+  .app-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--app-border), transparent);
+  }
+
+  .app-soft {
+    color: var(--app-ink-muted);
+  }
+
   html {
-    @apply scroll-smooth
+    @apply scroll-smooth;
   }
 
   button {
-    @apply cursor-pointer
+    @apply cursor-pointer;
   }
 }

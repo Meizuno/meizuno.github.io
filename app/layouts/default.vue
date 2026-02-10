@@ -1,5 +1,5 @@
 <template>
-  <UContainer class="py-2 flex flex-col gap-2">
+  <UContainer class="py-6 flex flex-col gap-4">
     <Transition name="fade">
       <div
         v-if="isLoading"
@@ -13,12 +13,12 @@
     </Transition>
 
     <header
-      class="bg-elevated p-4 rounded flex flex-col md:flex-row justify-between gap-4"
+      class="app-shell p-5 md:p-6 flex flex-col md:flex-row justify-between gap-6"
     >
       <AppUser class="flex-1" />
       <USeparator class="block md:hidden" />
       <div class="flex-1 flex justify-end items-center">
-        <div class="flex items-center">
+        <div class="flex items-center gap-2">
           <UTooltip text="Download CV">
             <UButton
               icon="i-lucide-download"
@@ -26,7 +26,7 @@
               variant="ghost"
               size="xl"
               target="_blank"
-              class="hover:bg-default"
+              class="hover:bg-default rounded-full"
               @click="handleDownload"
             />
           </UTooltip>
@@ -37,7 +37,7 @@
                 color="neutral"
                 variant="ghost"
                 size="xl"
-                class="hover:bg-default"
+                class="hover:bg-default rounded-full"
                 @click="isDark = !isDark"
               />
             </UTooltip>

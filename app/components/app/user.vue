@@ -4,11 +4,12 @@
       preload
       :src="user.image"
       alt="Photo"
-      class="rounded-full w-20 h-20 md:w-24 md:h-24 object-cover"
+      class="rounded-full w-20 h-20 md:w-24 md:h-24 object-cover border border-[var(--app-border)] shadow-sm"
     />
     <div class="flex flex-col">
-      <h2 class="text-2xl font-bold">{{ user.title }}</h2>
-      <p class="text-muted text-md">
+      <span class="app-kicker">Portfolio</span>
+      <h2 class="text-2xl md:text-3xl font-semibold">{{ user.title }}</h2>
+      <p class="app-soft text-md">
         {{ user.role }} at
         <ULink :to="user.companyUrl" target="_blank">{{ user.company }}</ULink>
       </p>

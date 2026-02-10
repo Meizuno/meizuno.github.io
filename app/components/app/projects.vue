@@ -15,8 +15,8 @@
             <span class="text-xl font-semibold text-default">
               {{ item.title }}
             </span>
-            <span class="text-muted">Account: {{ item.duration }}</span>
-            <span class="text-muted">{{ item.info }}</span>
+            <span class="app-soft">Account: {{ item.duration }}</span>
+            <span class="app-soft">{{ item.info }}</span>
           </div>
         </ULink>
         <div class="flex flex-col gap-8 ml-4">
@@ -34,7 +34,7 @@
             />
             <UIcon
               name="i-octicon-repo-16"
-              class="size-7 min-h-7 min-w-7 text-muted mt-1.5"
+              class="size-7 min-h-7 min-w-7 app-soft mt-1.5"
             />
             <ULink
               :to="project.to"
@@ -44,8 +44,8 @@
               <span class="text-default text-lg font-medium">
                 {{ project.title }}
               </span>
-              <span class="text-muted">{{ project.description }} </span>
-              <span class="text-muted">{{ project.technologies }} </span>
+              <span class="app-soft">{{ project.description }} </span>
+              <span class="app-soft">{{ project.technologies }} </span>
             </ULink>
           </div>
         </div>
