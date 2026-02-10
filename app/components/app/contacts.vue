@@ -8,7 +8,7 @@
         color="neutral"
         :to="contact.to"
         target="_blank"
-        class="w-full flex justify-center border border-[var(--app-border)]"
+        class="w-full flex justify-center border border-(--app-border)"
       >
         <UIcon :name="contact.icon" class="size-8" />
       </UButton>

@@ -1,14 +1,14 @@
 <template>
-  <div v-if="user" class="flex items-center gap-4">
+  <div v-if="user" class="flex items-center gap-3">
     <NuxtImg
       preload
       :src="user.image"
       alt="Photo"
-      class="rounded-full w-20 h-20 md:w-24 md:h-24 object-cover border border-[var(--app-border)] shadow-sm"
+      class="rounded-full w-16 h-16 md:w-20 md:h-20 object-cover border border-(--app-border) shadow-sm"
     />
-    <div class="flex flex-col">
+    <div class="flex flex-col gap-1">
       <span class="app-kicker">Portfolio</span>
-      <h2 class="text-2xl md:text-3xl font-semibold">{{ user.title }}</h2>
+      <h2 class="text-xl md:text-2xl font-semibold">{{ user.title }}</h2>
       <p class="app-soft text-md">
         {{ user.role }} at
         <ULink :to="user.companyUrl" target="_blank">{{ user.company }}</ULink>

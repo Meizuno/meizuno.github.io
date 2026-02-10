@@ -1,5 +1,5 @@
 <template>
-  <UContainer class="py-6 flex flex-col gap-4">
+  <UContainer class="py-4 flex flex-col gap-4">
     <Transition name="fade">
       <div
         v-if="isLoading"
@@ -13,7 +13,7 @@
     </Transition>
 
     <header
-      class="app-shell p-5 md:p-6 flex flex-col md:flex-row justify-between gap-6"
+      class="app-shell p-4 md:p-4 flex flex-col md:flex-row justify-between gap-4"
     >
       <AppUser class="flex-1" />
       <USeparator class="block md:hidden" />

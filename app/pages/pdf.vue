@@ -1,7 +1,7 @@
 <template>
   <div class="max-w-5xl min-w-5xl p-2 mx-auto flex justify-center items-center">
     <div class="aspect-[210/297] w-[934px] min-w-[934px] overflow-clip">
-      <div class="h-full w-full flex flex-col gap-2 app-panel p-2">
+      <div class="pdf-mode h-full w-full flex flex-col gap-2 app-panel p-2">
         <header
           class="app-panel-muted py-2 px-6 flex justify-between items-center"
         >
@@ -14,7 +14,8 @@
                 :to="contact.to"
                 color="neutral"
                 variant="outline"
-                class="bg-[var(--app-surface-2)] w-full border border-[var(--app-border)]"
+                size="sm"
+                class="bg-[var(--app-surface-2)] w-full border border-(--app-border)"
               />
             </div>
           </div>
@@ -26,9 +27,7 @@
             <AppLanguages />
             <AppContacts />
           </div>
-          <div
-            class="h-full app-panel flex flex-col justify-between py-2 px-6"
-          >
+          <div class="h-full app-panel flex flex-col justify-between py-2 px-6">
             <div>
               <AppAbout />
             </div>
@@ -42,7 +41,7 @@
               </div>
             </div>
             <div>
-              <AppApplications :custom-class="'md:grid-cols-2 md:gap-12'" />
+              <AppApplications :custom-class="'grid-cols-2 gap-3'" />
             </div>
           </div>
         </main>
@@ -76,6 +75,6 @@ const contacts = ref([
     title: "Profile",
     icon: "i-streamline-web",
     to: "https://meizuno.github.io/",
-  }
+  },
 ]);
 </script>
