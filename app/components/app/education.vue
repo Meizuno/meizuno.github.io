@@ -21,8 +21,33 @@
 </template>
 
 <script setup lang="ts">
-const data = await queryCollection("home").select("education").first();
-const educations = data?.education ?? [];
+type Education = {
+  institution: string;
+  degree: string;
+  link: string;
+  image: string;
+  start: string;
+  end: string | null;
+};
+
+const educations: Education[] = [
+  {
+    institution: "Brno University of Technology (Incomplete)",
+    degree: "Faculty of Information Technology",
+    link: "https://www.vut.cz/",
+    image: "/images/vut.jpg",
+    start: "2020-09",
+    end: "2024-08",
+  },
+  {
+    institution: "Kherson National Technical University",
+    degree: "Bachelor of Technology - BTech",
+    link: "https://kntu.net.ua/",
+    image: "/images/kntu.jpeg",
+    start: "2017-09",
+    end: "2021-06",
+  },
+];
 
 const items = computed(() =>
   educations?.map((education) => ({

@@ -5,9 +5,7 @@ export default defineNuxtConfig({
   modules: [
     "@nuxt/image",
     "@nuxt/ui",
-    "@nuxt/content",
     "@nuxtjs/sitemap",
-    "@nuxtjs/mdc",
   ],
   css: ["~/assets/css/main.css"],
 
@@ -46,39 +44,8 @@ export default defineNuxtConfig({
   },
 
   ignore: ["scripts"],
-  content: {
-    experimental: { nativeSqlite: true },
-    preview: {
-      api: "https://api.nuxt.studio",
-    },
-    build: {
-      markdown: {
-        highlight: false,
-      },
-    },
-  },
-
   site: {
     url: "https://meizuno.github.io",
     name: "Meizuno Portfolio",
-  },
-
-  components: {
-    global: true,
-    dirs: ["~/components"],
-  },
-
-  ui: {
-    theme: {
-      colors: [
-        "primary",
-        "secondary",
-        "important",
-        "info",
-        "success",
-        "warning",
-        "error",
-      ],
-    },
   },
 });

@@ -17,5 +17,11 @@
 </template>
 
 <script setup lang="ts">
-const user = await queryCollection("user").first();
+const user = {
+  title: "Yurii Myronov",
+  role: "Lead Developer",
+  company: "Dlubal Software",
+  companyUrl: "https://www.dlubal.com",
+  image: "/photo.webp",
+};
 </script>

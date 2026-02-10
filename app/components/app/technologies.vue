@@ -17,6 +17,12 @@
 </template>
 
 <script setup lang="ts">
-const data = await queryCollection("home").select("technologies").first();
-const technologies = data?.technologies ?? [];
+const technologies: string[] = [
+  "GitHub/GitLab (CI/CD, Actions)",
+  "Django, FastAPI",
+  "Javascript / Typescript",
+  "Nuxt UI (Vue, Tailwind)",
+  "Docker (Swarm, Compose, Volumes)",
+  "Tauri (IOS, Android, Windows)",
+];
 </script>

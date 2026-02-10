@@ -17,6 +17,18 @@
 </template>
 
 <script setup lang="ts">
-const data = await queryCollection("home").select("contact").first();
-const contacts = data?.contact ?? [];
+const contacts = [
+  {
+    icon: "i-mdi-github",
+    to: "https://github.com/Meizuno",
+  },
+  {
+    icon: "i-mdi-linkedin",
+    to: "https://www.linkedin.com/in/yurii-myronov-694b99249/",
+  },
+  {
+    icon: "i-material-symbols-mail",
+    to: "mailto:yuramiron16@gmail.com",
+  },
+];
 </script>

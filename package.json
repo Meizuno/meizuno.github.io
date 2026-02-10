@@ -11,7 +11,6 @@
     "pdf": "node scripts/generate-pdf.mjs"
   },
   "dependencies": {
-    "@nuxt/content": "^3.9.0",
     "@nuxt/icon": "2.0.0",
     "@nuxt/image": "1.11.0",
     "@nuxt/ui": "^4.2.1",

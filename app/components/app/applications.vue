@@ -34,6 +34,34 @@ defineProps({
   },
 });
 
-const data = await queryCollection("home").select("application").first();
-const apps = data?.application ?? [];
+const apps = [
+  {
+    title: "Andrii Hlushchenko",
+    image: "/images/andrii.webp",
+    description: "Car rental at great prices",
+    url: "https://andrii.devhost.uk/",
+    tag: "Web",
+  },
+  {
+    title: "Storage Disk",
+    image: "/images/disk.webp",
+    description: "Storage for my files",
+    url: "https://disk.devhost.uk/",
+    tag: "Web",
+  },
+  {
+    title: "Text Book",
+    image: "/images/text-book.png",
+    description: "Mobile application for notes, supports Markdown",
+    url: "https://apps.apple.com/cz/app/text-book-personal-notes/id6740556982",
+    tag: "IOS",
+  },
+  {
+    title: "OTP Genie",
+    image: "/images/otp-genie.png",
+    description: "Storage for my files",
+    url: "https://apps.apple.com/cz/app/otp-genie/id6748459774",
+    tag: "IOS",
+  },
+];
 </script>

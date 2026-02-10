@@ -17,16 +17,7 @@
     >
       <AppUser class="flex-1" />
       <USeparator class="block md:hidden" />
-      <div class="flex-1 flex justify-between items-center">
-        <UNavigationMenu
-          :items="items"
-          size="lg"
-          :ui="{
-            linkLabel: 'hidden sm:block truncate lg:text-xl',
-            linkLeadingIcon: 'shrink-0 size-8',
-            link: 'flex-col gap-2 lg:flex-row',
-          }"
-        />
+      <div class="flex-1 flex justify-end items-center">
         <div class="flex items-center">
           <UTooltip text="Download CV">
             <UButton
@@ -65,26 +56,6 @@
 </template>
 
 <script setup lang="ts">
-import type { NavigationMenuItem } from "@nuxt/ui";
-
-const items = ref<NavigationMenuItem[]>([
-  {
-    label: "Portfolio",
-    icon: "i-ph-read-cv-logo-bold",
-    to: "/",
-  },
-  {
-    label: "Cheat Sheet",
-    icon: "i-streamline-manual-book",
-    to: "/cheat-sheet",
-  },
-  {
-    label: "Scripts",
-    icon: "i-proicons-script",
-    to: "/scripts",
-  },
-]);
-
 const colorMode = useColorMode();
 
 const isDark = computed({

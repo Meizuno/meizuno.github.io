@@ -43,8 +43,49 @@
 </template>
 
 <script setup lang="ts">
-const data = await queryCollection("home").select("experience").first();
-const experiences = data?.experience ?? [];
+type ExperienceRole = {
+  title: string;
+  start: string;
+  end: string | null;
+  format: string;
+};
+
+type Experience = {
+  company: string;
+  location: string;
+  link: string;
+  image: string;
+  format: string;
+  start: string;
+  end: string | null;
+  roles: ExperienceRole[];
+};
+
+const experiences: Experience[] = [
+  {
+    company: "Dlubal Software",
+    location: "Prague, Czechia",
+    link: "https://www.dlubal.com",
+    image: "/images/dlubal.jpeg",
+    format: "Full-time",
+    start: "2023-07",
+    end: null,
+    roles: [
+      {
+        title: "Lead Programmer",
+        start: "2025-01",
+        end: null,
+        format: "Hybrid",
+      },
+      {
+        title: "Backend Developer",
+        start: "2023-07",
+        end: "2025-01",
+        format: "On-site",
+      },
+    ],
+  },
+];
 
 const items = computed(() =>
   experiences?.map((experience) => ({

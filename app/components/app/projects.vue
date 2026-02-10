@@ -55,8 +55,68 @@
 </template>
 
 <script setup lang="ts">
-const data = await queryCollection("home").select("project").first();
-const projects = data?.project ?? [];
+type ProjectItem = {
+  title: string;
+  technologies: string;
+  description: string;
+  to: string;
+};
+
+type Project = {
+  title: string;
+  link: string;
+  image: string;
+  accountLink: string;
+  start: string;
+  end: string | null;
+  info: string;
+  list: ProjectItem[];
+};
+
+const projects: Project[] = [
+  {
+    title: "Meizuno",
+    link: "https://github.com/",
+    image: "/images/github.webp",
+    accountLink: "https://github.com/Meizuno",
+    start: "2018-12",
+    end: null,
+    info: "Repositories: 14",
+    list: [
+      {
+        title: "Text Book",
+        technologies: "Nuxt, Tauri",
+        description: "Mobile application for notes, supports Markdown",
+        to: "https://github.com/Meizuno/TextBook",
+      },
+      {
+        title: "Authenticator",
+        technologies: "Nuxt, Capacitor",
+        description:
+          "Generating OTPs (One-Time Passwords) and managing 2FA (Two-Factor Authentication)",
+        to: "https://github.com/Meizuno/Authenticator",
+      },
+      {
+        title: "Andrii",
+        technologies: "Nuxt, Nuxt Content",
+        description: "Client project using Nuxt Content",
+        to: "https://github.com/Meizuno/Andrii",
+      },
+      {
+        title: "Tic-Tak-Toe",
+        technologies: "Python",
+        description: "Game with GUI on Python with 'pygame' package",
+        to: "https://github.com/Meizuno/TicTakToe",
+      },
+      {
+        title: "Online Market",
+        technologies: "Python, Django",
+        description: "Web-market on framework Django",
+        to: "https://github.com/Meizuno/online-market",
+      },
+    ],
+  },
+];
 
 const items = computed(() =>
   projects?.map((project) => ({
