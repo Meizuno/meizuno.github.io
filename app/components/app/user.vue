@@ -18,11 +18,7 @@
 </template>
 
 <script setup lang="ts">
-const user = {
-  title: "Yurii Myronov",
-  role: "Lead Developer",
-  company: "Dlubal Software",
-  companyUrl: "https://www.dlubal.com",
-  image: "/photo.webp",
-};
+import cv from "~/data/cv.json";
+
+const user = cv.user;
 </script>

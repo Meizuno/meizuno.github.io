@@ -1,13 +1,13 @@
 <template>
   <AppBlock v-if="items" title="Experience">
     <div class="flex flex-col gap-4">
-      <div v-for="item in items" class="flex flex-col gap-4">
+      <div v-for="item in items" :key="item.company" class="flex flex-col gap-4">
         <ULink :to="item.link" target="_blank" class="flex gap-4 text-default">
           <NuxtImg
             preload
             :src="item.image"
             :alt="item.company"
-            class="w-16 h-16 min-w-16 mix-h-16 object-cover"
+            class="w-16 h-16 min-w-16 min-h-16 object-cover"
           />
           <div class="flex flex-col text-sm">
             <h4 class="text-xl font-semibold">{{ item.company }}</h4>
@@ -18,7 +18,7 @@
           </div>
         </ULink>
         <div class="flex flex-col gap-8 ml-4">
-          <div v-for="(role, index) in item.roles" class="relative flex gap-2">
+          <div v-for="(role, index) in item.roles" :key="role.title" class="relative flex gap-2">
             <USeparator
               v-if="index < item.roles.length - 1"
               orientation="vertical"
@@ -43,52 +43,10 @@
 </template>
 
 <script setup lang="ts">
-type ExperienceRole = {
-  title: string;
-  start: string;
-  end: string | null;
-  format: string;
-};
-
-type Experience = {
-  company: string;
-  location: string;
-  link: string;
-  image: string;
-  format: string;
-  start: string;
-  end: string | null;
-  roles: ExperienceRole[];
-};
-
-const experiences: Experience[] = [
-  {
-    company: "Dlubal Software",
-    location: "Prague, Czechia",
-    link: "https://www.dlubal.com",
-    image: "/images/dlubal.jpeg",
-    format: "Full-time",
-    start: "2023-07",
-    end: null,
-    roles: [
-      {
-        title: "Lead Programmer",
-        start: "2025-01",
-        end: null,
-        format: "Hybrid",
-      },
-      {
-        title: "Backend Developer",
-        start: "2023-07",
-        end: "2025-01",
-        format: "On-site",
-      },
-    ],
-  },
-];
+import cv from "~/data/cv.json";
 
 const items = computed(() =>
-  experiences?.map((experience) => ({
+  cv.experiences.map((experience) => ({
     ...experience,
     duration: getDuration(experience.start, experience.end),
     roles: experience.roles.map((role) => ({

@@ -1,13 +1,13 @@
 <template>
   <div class="max-w-5xl min-w-5xl p-2 mx-auto flex justify-center items-center">
-    <div class="aspect-[210/297] w-[934px] min-w-[934px] overflow-clip">
+    <div class="aspect-210/297 w-[934px] min-w-[934px] overflow-clip">
       <div class="pdf-mode h-full w-full flex flex-col gap-2 app-panel p-2">
         <header
           class="app-panel-muted py-2 px-6 flex justify-between items-center"
         >
           <AppUser />
           <div class="w-1/2 grid grid-cols-2 gap-2">
-            <div v-for="contact in contacts">
+            <div v-for="contact in contacts" :key="contact.title">
               <UButton
                 :label="contact.title"
                 :icon="contact.icon"
@@ -15,7 +15,7 @@
                 color="neutral"
                 variant="outline"
                 size="sm"
-                class="bg-[var(--app-surface-2)] w-full border border-(--app-border)"
+                class="bg-(--app-surface-2) w-full border border-(--app-border)"
               />
             </div>
           </div>
@@ -51,30 +51,11 @@
 </template>
 
 <script setup lang="ts">
+import cv from "~/data/cv.json";
+
 definePageMeta({
   layout: "blank",
 });
 
-const contacts = ref([
-  {
-    title: "GitHub",
-    icon: "i-mdi-github",
-    to: "https://github.com/Meizuno",
-  },
-  {
-    title: "LinkedIn",
-    icon: "i-mdi-linkedin",
-    to: "https://www.linkedin.com/in/yurii-myronov-694b99249/",
-  },
-  {
-    title: "Email",
-    icon: "i-material-symbols-mail",
-    to: "mailto:yuramiron16@gmail.com",
-  },
-  {
-    title: "Profile",
-    icon: "i-streamline-web",
-    to: "https://meizuno.github.io/",
-  },
-]);
+const contacts = cv.contacts;
 </script>

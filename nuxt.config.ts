@@ -17,7 +17,7 @@ export default defineNuxtConfig({
       },
       meta: [
         {
-          name: "autor",
+          name: "author",
           content: "Yurii Myronov",
         },
         {
@@ -27,7 +27,7 @@ export default defineNuxtConfig({
         {
           name: "description",
           content:
-            "Porfolio of Yurii Myronov, a web developer specializing in Python and Nuxt.js.",
+            "Portfolio of Yurii Myronov, a full-stack web developer specializing in Python (Django, FastAPI) and Nuxt.js.",
         },
         {
           name: "keywords",
@@ -38,12 +38,28 @@ export default defineNuxtConfig({
           name: "google-site-verification",
           content: "OOxjPjUxN8-_Lutvr3YU_SpccgnG88yizggIkmeGP5A",
         },
+        { property: "og:type", content: "website" },
+        { property: "og:title", content: "Yurii Myronov — Portfolio" },
+        {
+          property: "og:description",
+          content:
+            "Full-stack web developer specializing in Python (Django, FastAPI) and Nuxt.js.",
+        },
+        { property: "og:url", content: "https://meizuno.github.io" },
+        { property: "og:image", content: "https://meizuno.github.io/photo.webp" },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: "Yurii Myronov — Portfolio" },
+        {
+          name: "twitter:description",
+          content:
+            "Full-stack web developer specializing in Python (Django, FastAPI) and Nuxt.js.",
+        },
+        { name: "twitter:image", content: "https://meizuno.github.io/photo.webp" },
       ],
       link: [{ rel: "icon", type: "image/svg", href: "/favicon.svg" }],
     },
   },
 
-  ignore: ["scripts"],
   site: {
     url: "https://meizuno.github.io",
     name: "Meizuno Portfolio",

@@ -17,12 +17,7 @@
 </template>
 
 <script setup lang="ts">
-const technologies: string[] = [
-  "GitHub/GitLab (CI/CD, Actions)",
-  "Django, FastAPI",
-  "Javascript / Typescript",
-  "Nuxt UI (Vue, Tailwind)",
-  "Docker (Swarm, Compose, Volumes)",
-  "Tauri (IOS, Android, Windows)",
-];
+import cv from "~/data/cv.json";
+
+const technologies = cv.technologies;
 </script>

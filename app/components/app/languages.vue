@@ -33,7 +33,7 @@
             :transform="`rotate(-90 ${c} ${c})`"
           >
             <animate
-              id="anim"
+              ref="animEls"
               attributeName="stroke-dashoffset"
               :from="circ"
               :to="circ * (1 - lang.value / 100)"
@@ -62,6 +62,8 @@
 </template>
 
 <script setup lang="ts">
+import cv from "~/data/cv.json";
+
 const size = 60;
 const stroke = 5;
 
@@ -69,24 +71,11 @@ const c = computed(() => size / 2);
 const r = computed(() => size / 2 - stroke / 2);
 const circ = computed(() => 2 * Math.PI * r.value);
 
-const languages = [
-  {
-    label: "Ukrainian",
-    value: 100,
-  },
-  {
-    label: "English",
-    value: 70,
-  },
-  {
-    label: "Czech",
-    value: 80,
-  },
-];
+const languages = cv.languages;
 
-onMounted(async () => {
-  document.querySelectorAll<SVGAnimateElement>("#anim").forEach(anim => {
-    anim.beginElement();
-  });
+const animEls = ref<SVGAnimateElement[]>([]);
+
+onMounted(() => {
+  animEls.value.forEach((anim) => anim.beginElement());
 });
 </script>

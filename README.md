@@ -1,75 +1,58 @@
-# Nuxt Minimal Starter
+# Yurii Myronov — Portfolio
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Personal portfolio site built with [Nuxt 4](https://nuxt.com/) and [Nuxt UI 4](https://ui.nuxt.com/).
+Live at **[meizuno.github.io](https://meizuno.github.io)**.
 
-## Setup
+The same Vue components are used to render both the interactive site and a print-ready CV PDF, so the two never drift out of sync.
 
-Make sure to install dependencies:
+## Tech stack
+
+- Nuxt 4 + Vue 3 + TypeScript
+- Nuxt UI 4 + Tailwind CSS (custom CSS variables for theming, light/dark mode)
+- `@nuxt/image` for optimized images
+- `@nuxtjs/sitemap` for sitemap generation
+- Puppeteer for headless PDF rendering of the `/pdf` page
+
+## Development
+
+Install dependencies:
 
 ```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
 yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+Start the dev server on `http://localhost:3000`:
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
 yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
-
-Build the application for production:
+## Build
 
 ```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
+yarn build        # production build
+yarn generate     # static site (used for GitHub Pages)
+yarn preview      # preview the production build locally
 ```
 
-Locally preview production build:
+## Regenerate the CV PDF
 
-```bash
-# npm
-npm run preview
+The CV at [public/yurii-myronov.pdf](public/yurii-myronov.pdf) is generated from the `/pdf` route.
 
-# pnpm
-pnpm preview
+1. Start the dev server: `yarn dev`
+2. In another terminal: `yarn pdf`
 
-# yarn
-yarn preview
+The script ([scripts/generate-pdf.mjs](scripts/generate-pdf.mjs)) drives Puppeteer against `http://localhost:3000/pdf` and writes the PDF back to `public/`.
 
-# bun
-bun run preview
+## Project structure
+
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+app/
+  components/app/   Page sections (about, experience, projects, …)
+  layouts/          default + blank (used by /pdf)
+  pages/            index.vue (site) and pdf.vue (PDF view)
+  utils/            date helpers, contacts list
+  assets/css/       Tailwind + custom theme variables
+public/             static assets, generated PDF
+scripts/            PDF generation script (ignored by Nuxt)
+```
