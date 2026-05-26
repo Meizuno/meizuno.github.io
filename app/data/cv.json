@@ -156,10 +156,10 @@
       "tag": "GitHub"
     },
     {
-      "title": "Andrii Hlushchenko",
-      "image": "/images/andrii.webp",
-      "description": "Car rental at great prices",
-      "url": "https://andrii.devhost.uk/",
+      "title": "Notes",
+      "image": "/images/notes.webp",
+      "description": "Self-hosted notes vault with graph and folder views",
+      "url": "https://notes.meizuno.com/",
       "tag": "Web"
     },
     {

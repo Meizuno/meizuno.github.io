@@ -1,17 +1,5 @@
 <template>
   <UContainer class="py-4 flex flex-col gap-4">
-    <Transition name="fade">
-      <div
-        v-if="isLoading"
-        class="fixed inset-0 bg-black/40 backdrop-blur-sm flex items-center justify-center z-50"
-      >
-        <div class="flex flex-col items-center gap-4 text-primary">
-          <UIcon name="i-lucide-loader-2" class="animate-spin w-12 h-12" />
-          <span class="text-lg font-medium">Generating PDF...</span>
-        </div>
-      </div>
-    </Transition>
-
     <header
       class="app-shell p-4 md:p-4 flex flex-col md:flex-row justify-between gap-4"
     >
@@ -19,17 +7,17 @@
       <USeparator class="block md:hidden" />
       <div class="flex-1 flex justify-end items-center">
         <div class="flex items-center gap-2">
-          <UTooltip text="Download CV">
-            <UButton
-              icon="i-lucide-download"
-              color="neutral"
-              variant="ghost"
-              size="xl"
-              target="_blank"
-              class="hover:bg-default rounded-full"
-              @click="handleDownload"
-            />
-          </UTooltip>
+          <UDropdownMenu :items="downloadItems" :content="{ align: 'end' }">
+            <UTooltip text="Download CV">
+              <UButton
+                icon="i-lucide-download"
+                color="neutral"
+                variant="ghost"
+                size="xl"
+                class="hover:bg-default rounded-full"
+              />
+            </UTooltip>
+          </UDropdownMenu>
           <ClientOnly v-if="!colorMode?.forced">
             <UTooltip text="Switch theme">
               <UButton
@@ -67,8 +55,16 @@ const isDark = computed({
   },
 });
 
-const isLoading = ref(false);
-async function handleDownload() {
-  window.open("/yurii-myronov.pdf", "_blank");
-}
+const downloadItems = [
+  {
+    label: "Visual CV",
+    icon: "i-lucide-file-image",
+    onSelect: () => window.open("/yurii-myronov.pdf", "_blank"),
+  },
+  {
+    label: "ATS-friendly CV",
+    icon: "i-lucide-file-text",
+    onSelect: () => window.open("/yurii-myronov-ats.pdf", "_blank"),
+  },
+];
 </script>
