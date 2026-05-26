@@ -22,8 +22,7 @@
         </header>
         <main class="flex-1 grid grid-cols-[2fr_5fr] gap-2">
           <div class="app-panel-muted flex flex-col justify-between py-2 px-6">
-            <AppSkills />
-            <AppTechnologies />
+            <AppStack />
             <AppLanguages />
             <AppContacts />
           </div>

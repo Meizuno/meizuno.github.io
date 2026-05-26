@@ -3,9 +3,9 @@
     <div
       class="app-panel-muted py-4 px-4 lg:px-6 flex flex-col gap-8 justify-between"
     >
-      <AppSkills />
-      <AppTechnologies />
+      <AppStack />
       <AppLanguages />
+      <AppStatus />
       <AppContacts />
     </div>
     <div

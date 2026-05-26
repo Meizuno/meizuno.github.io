@@ -7,21 +7,64 @@
     "image": "/photo.webp"
   },
   "about": "I am a full-stack web developer with experience in backend (Python, Django, FastAPI) and frontend (Vue.js, Nuxt). I enjoy building reliable and user-friendly applications — from backend architecture to intuitive interfaces. Always eager to learn new technologies, I focus on teamwork and creating projects that deliver real value to users.",
-  "skills": [
-    { "label": "Git", "value": 9, "max": 10, "to": "https://git-scm.com/", "description": "GitHub, GitLab" },
-    { "label": "Python", "value": 9.5, "max": 10, "to": "https://www.python.org/", "description": "Django, FastAPI" },
-    { "label": "Nuxt", "value": 8, "max": 10, "to": "https://nuxt.com/", "description": "Nuxt UI" },
-    { "label": "Docker", "value": 9, "max": 10, "to": "https://www.docker.com/", "description": "Docker Compose" },
-    { "label": "Capacitor", "value": 7, "max": 10, "to": "https://capacitorjs.com/", "description": "IOS, Android" },
-    { "label": "Tauri", "value": 6, "max": 10, "to": "https://v2.tauri.app/", "description": "IOS, Android, Windows" }
-  ],
-  "technologies": [
-    "GitHub/GitLab (CI/CD, Actions)",
-    "Django, FastAPI",
-    "Javascript / Typescript",
-    "Nuxt UI (Vue, Tailwind)",
-    "Docker (Swarm, Compose, Volumes)",
-    "Tauri (IOS, Android, Windows)"
+  "profile": {
+    "location": "Prague, Czechia",
+    "timezone": "CET (GMT+1)",
+    "availability": "Open to opportunities",
+    "githubUsername": "Meizuno"
+  },
+  "stack": [
+    {
+      "category": "Backend",
+      "items": [
+        { "label": "Python", "to": "https://www.python.org/" },
+        { "label": "Django", "to": "https://www.djangoproject.com/" },
+        { "label": "FastAPI", "to": "https://fastapi.tiangolo.com/" }
+      ]
+    },
+    {
+      "category": "Frontend",
+      "items": [
+        { "label": "Vue", "to": "https://vuejs.org/" },
+        { "label": "Nuxt", "to": "https://nuxt.com/" },
+        { "label": "Quasar", "to": "https://quasar.dev/" },
+        { "label": "Tauri", "to": "https://v2.tauri.app/" },
+        { "label": "Capacitor", "to": "https://capacitorjs.com/" }
+      ]
+    },
+    {
+      "category": "API",
+      "items": [
+        { "label": "REST", "to": "https://restfulapi.net/" },
+        { "label": "GraphQL", "to": "https://graphql.org/" },
+        { "label": "gRPC", "to": "https://grpc.io/" }
+      ]
+    },
+    {
+      "category": "Databases",
+      "items": [
+        { "label": "PostgreSQL", "to": "https://www.postgresql.org/" },
+        { "label": "SQLite", "to": "https://www.sqlite.org/" },
+        { "label": "MongoDB", "to": "https://www.mongodb.com/" },
+        { "label": "Redis", "to": "https://redis.io/" }
+      ]
+    },
+    {
+      "category": "DevOps",
+      "items": [
+        { "label": "Docker", "to": "https://www.docker.com/" },
+        { "label": "Nginx", "to": "https://nginx.org/" },
+        { "label": "GitHub Actions", "to": "https://docs.github.com/actions" },
+        { "label": "GitLab CI/CD", "to": "https://docs.gitlab.com/ee/ci/" }
+      ]
+    },
+    {
+      "category": "Testing",
+      "items": [
+        { "label": "Pytest", "to": "https://docs.pytest.org/" },
+        { "label": "Newman", "to": "https://github.com/postmanlabs/newman" }
+      ]
+    }
   ],
   "languages": [
     { "label": "Ukrainian", "value": 100 },
