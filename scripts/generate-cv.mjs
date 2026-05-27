@@ -1,6 +1,6 @@
 import puppeteer from "puppeteer";
 
-const url = "http://localhost:3000/cv-ats";
+const url = "http://localhost:3000/cv";
 const outputPath = "./public/yurii-myronov.pdf";
 
 const browser = await puppeteer.launch({

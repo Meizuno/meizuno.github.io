@@ -155,7 +155,7 @@ import cvData from "~/data/cv.json";
 definePageMeta({ layout: "blank" });
 
 useHead({
-  title: `${cvData.user.title} — CV (ATS)`,
+  title: `${cvData.user.title} — CV`,
   meta: [{ name: "robots", content: "noindex" }],
 });
 
