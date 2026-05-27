@@ -7,17 +7,16 @@
       <USeparator class="block md:hidden" />
       <div class="flex-1 flex justify-end items-center">
         <div class="flex items-center gap-2">
-          <UDropdownMenu :items="downloadItems" :content="{ align: 'end' }">
-            <UTooltip text="Download CV">
-              <UButton
-                icon="i-lucide-download"
-                color="neutral"
-                variant="ghost"
-                size="xl"
-                class="hover:bg-default rounded-full"
-              />
-            </UTooltip>
-          </UDropdownMenu>
+          <UTooltip text="Download CV">
+            <UButton
+              icon="i-lucide-download"
+              color="neutral"
+              variant="ghost"
+              size="xl"
+              class="hover:bg-default rounded-full"
+              @click="handleDownload"
+            />
+          </UTooltip>
           <ClientOnly v-if="!colorMode?.forced">
             <UTooltip text="Switch theme">
               <UButton
@@ -55,16 +54,7 @@ const isDark = computed({
   },
 });
 
-const downloadItems = [
-  {
-    label: "Visual CV",
-    icon: "i-lucide-file-image",
-    onSelect: () => window.open("/yurii-myronov.pdf", "_blank"),
-  },
-  {
-    label: "ATS-friendly CV",
-    icon: "i-lucide-file-text",
-    onSelect: () => window.open("/yurii-myronov-ats.pdf", "_blank"),
-  },
-];
+function handleDownload() {
+  window.open("/yurii-myronov.pdf", "_blank");
+}
 </script>

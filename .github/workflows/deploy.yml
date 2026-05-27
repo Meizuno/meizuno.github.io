@@ -27,6 +27,14 @@ jobs:
       - name: Install dependencies
         run: yarn install --frozen-lockfile
 
+      - name: Generate CV PDF
+        run: |
+          yarn dev &
+          DEV_PID=$!
+          timeout 60 bash -c 'until curl -sf http://localhost:3000 > /dev/null; do sleep 1; done'
+          yarn cv
+          kill $DEV_PID 2>/dev/null || true
+
       - name: Build static site
         run: NODE_OPTIONS="--max-old-space-size=8192" yarn generate
 

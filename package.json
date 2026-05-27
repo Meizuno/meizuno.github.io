@@ -8,7 +8,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "pdf": "node scripts/generate-pdf.mjs"
+    "cv": "node scripts/generate-cv.mjs"
   },
   "dependencies": {
     "@nuxt/icon": "2.0.0",
