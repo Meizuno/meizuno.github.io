@@ -164,11 +164,11 @@
       "tag": "Web"
     },
     {
-      "title": "Text Book",
-      "image": "/images/text-book.png",
-      "description": "Mobile application for notes, supports Markdown",
-      "url": "https://apps.apple.com/cz/app/text-book-personal-notes/id6740556982",
-      "tag": "IOS"
+      "title": "Docket",
+      "image": "/images/docket.svg",
+      "description": "Pull-based task queue built on FastAPI and Postgres",
+      "url": "https://github.com/Meizuno/Docket",
+      "tag": "GitHub"
     },
     {
       "title": "OTP Genie",

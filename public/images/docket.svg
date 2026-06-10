@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
+  <defs>
+    <linearGradient id="board" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#fb923c"/>
+      <stop offset="100%" stop-color="#9a3412"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Clipboard board -->
+  <rect x="22" y="44" width="136" height="124" rx="14" fill="url(#board)"/>
+
+  <!-- Metal clip with inner notch -->
+  <rect x="64" y="22" width="52" height="34" rx="8" fill="#7c2d12"/>
+  <rect x="76" y="30" width="28" height="18" rx="4" fill="#fb923c"/>
+
+  <!-- Task rows -->
+  <g>
+    <!-- Done -->
+    <circle cx="44" cy="80" r="11" fill="#fff"/>
+    <path d="M 38 80 L 42 84 L 50 75" stroke="#fb923c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="62" y="76" width="84" height="8" rx="4" fill="#fff" fill-opacity="0.85"/>
+
+    <!-- Done -->
+    <circle cx="44" cy="108" r="11" fill="#fff"/>
+    <path d="M 38 108 L 42 112 L 50 103" stroke="#fb923c" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="62" y="104" width="74" height="8" rx="4" fill="#fff" fill-opacity="0.85"/>
+
+    <!-- Pending -->
+    <circle cx="44" cy="136" r="11" fill="#fff" fill-opacity="0.45"/>
+    <rect x="62" y="132" width="64" height="8" rx="4" fill="#fff" fill-opacity="0.45"/>
+  </g>
+</svg>
