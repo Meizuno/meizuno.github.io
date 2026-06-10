@@ -151,14 +151,14 @@
   "applications": [
     {
       "title": "Library",
-      "image": "/images/library.webp",
+      "image": "/images/library.svg",
       "description": "A Clean Architecture Example in Python",
       "url": "https://github.com/Meizuno/Library",
       "tag": "GitHub"
     },
     {
       "title": "Notes",
-      "image": "/images/notes.webp",
+      "image": "/images/notes.svg",
       "description": "Self-hosted notes vault with graph and folder views",
       "url": "https://notes.meizuno.com/",
       "tag": "Web"

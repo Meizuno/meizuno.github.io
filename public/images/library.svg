@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
+  <defs>
+    <linearGradient id="book" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0ea5e9"/>
+      <stop offset="100%" stop-color="#0c4a6e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Open book — two pages tilted at the top edge.
+       Right page slightly darker, so the center spine reads. -->
+  <path d="M 12 48 L 90 40 L 90 168 L 12 158 Z" fill="url(#book)"/>
+  <path d="M 168 48 L 90 40 L 90 168 L 168 158 Z" fill="url(#book)" fill-opacity="0.85"/>
+
+  <!-- Spine seam -->
+  <path d="M 87 40 L 93 40 L 93 168 L 87 168 Z" fill="#0c4a6e"/>
+
+  <!-- Text bars — left page -->
+  <g fill="#fff" fill-opacity="0.75">
+    <rect x="24" y="68"  width="50" height="6" rx="3"/>
+    <rect x="24" y="83"  width="52" height="6" rx="3"/>
+    <rect x="24" y="98"  width="48" height="6" rx="3"/>
+    <rect x="24" y="113" width="46" height="6" rx="3"/>
+    <rect x="24" y="128" width="44" height="6" rx="3"/>
+  </g>
+
+  <!-- Text bars — right page -->
+  <g fill="#fff" fill-opacity="0.75">
+    <rect x="106" y="68"  width="50" height="6" rx="3"/>
+    <rect x="106" y="83"  width="48" height="6" rx="3"/>
+    <rect x="106" y="98"  width="52" height="6" rx="3"/>
+    <rect x="106" y="113" width="46" height="6" rx="3"/>
+    <rect x="106" y="128" width="50" height="6" rx="3"/>
+  </g>
+</svg>
