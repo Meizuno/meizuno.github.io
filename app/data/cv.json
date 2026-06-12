@@ -6,7 +6,7 @@
     "companyUrl": "https://www.dlubal.com",
     "image": "/photo.webp"
   },
-  "about": "I am a full-stack web developer with experience in backend (Python, Django, FastAPI) and frontend (Vue.js, Nuxt). I enjoy building reliable and user-friendly applications — from backend architecture to intuitive interfaces. Always eager to learn new technologies, I focus on teamwork and creating projects that deliver real value to users.",
+  "about": "Full-stack developer and tech lead. I build production backends in Go and Python with Clean Architecture and DDD, reactive Nuxt/Vue frontends in fully-typed TypeScript, and run it all on my own Cloudflare-fronted VPS via Docker and GitHub Actions — including apps wired to LLMs through the Model Context Protocol (MCP).",
   "profile": {
     "location": "Prague, Czechia",
     "timezone": "CET (GMT+1)",
@@ -19,26 +19,27 @@
       "category": "Backend",
       "items": [
         { "label": "Python", "to": "https://www.python.org/" },
-        { "label": "Django", "to": "https://www.djangoproject.com/" },
-        { "label": "FastAPI", "to": "https://fastapi.tiangolo.com/" }
+        { "label": "Go", "to": "https://go.dev/" },
+        { "label": "FastAPI", "to": "https://fastapi.tiangolo.com/" },
+        { "label": "Django", "to": "https://www.djangoproject.com/" }
       ]
     },
     {
       "category": "Frontend",
       "items": [
+        { "label": "TypeScript", "to": "https://www.typescriptlang.org/" },
         { "label": "Vue", "to": "https://vuejs.org/" },
         { "label": "Nuxt", "to": "https://nuxt.com/" },
-        { "label": "Quasar", "to": "https://quasar.dev/" },
-        { "label": "Tauri", "to": "https://v2.tauri.app/" },
-        { "label": "Capacitor", "to": "https://capacitorjs.com/" }
+        { "label": "Tailwind CSS", "to": "https://tailwindcss.com/" }
       ]
     },
     {
-      "category": "API",
+      "category": "API & AI",
       "items": [
         { "label": "REST", "to": "https://restfulapi.net/" },
         { "label": "GraphQL", "to": "https://graphql.org/" },
-        { "label": "gRPC", "to": "https://grpc.io/" }
+        { "label": "gRPC", "to": "https://grpc.io/" },
+        { "label": "MCP", "to": "https://modelcontextprotocol.io/" }
       ]
     },
     {
@@ -51,10 +52,12 @@
       ]
     },
     {
-      "category": "DevOps",
+      "category": "Cloud & DevOps",
       "items": [
         { "label": "Docker", "to": "https://www.docker.com/" },
+        { "label": "Cloudflare", "to": "https://www.cloudflare.com/" },
         { "label": "Nginx", "to": "https://nginx.org/" },
+        { "label": "S3", "to": "https://aws.amazon.com/s3/" },
         { "label": "GitHub Actions", "to": "https://docs.github.com/actions" },
         { "label": "GitLab CI/CD", "to": "https://docs.gitlab.com/ee/ci/" }
       ]
@@ -63,6 +66,7 @@
       "category": "Testing",
       "items": [
         { "label": "Pytest", "to": "https://docs.pytest.org/" },
+        { "label": "Vitest", "to": "https://vitest.dev/" },
         { "label": "Newman", "to": "https://github.com/postmanlabs/newman" }
       ]
     }
@@ -116,34 +120,28 @@
       "end": null,
       "list": [
         {
-          "title": "Text Book",
-          "technologies": "Nuxt, Tauri",
-          "description": "Mobile application for notes, supports Markdown",
-          "to": "https://github.com/Meizuno/TextBook"
+          "title": "Authentication",
+          "technologies": "Go, Gin, JWT",
+          "description": "Auth microservice with JWT + refresh-token rotation and Google OAuth — the single sign-on all my apps delegate to",
+          "to": "https://github.com/Meizuno/Authentication"
         },
         {
-          "title": "Authenticator",
-          "technologies": "Nuxt, Capacitor",
-          "description": "Generating OTPs (One-Time Passwords) and managing 2FA (Two-Factor Authentication)",
-          "to": "https://github.com/Meizuno/Authenticator"
+          "title": "Money Manager",
+          "technologies": "Nuxt, PostgreSQL",
+          "description": "Personal finance tracker, integrated with AI Chat over the Model Context Protocol",
+          "to": "https://github.com/Meizuno/MoneyManager"
         },
         {
-          "title": "Andrii",
-          "technologies": "Nuxt, Nuxt Content",
-          "description": "Client project using Nuxt Content",
-          "to": "https://github.com/Meizuno/Andrii"
+          "title": "Recipes Book",
+          "technologies": "Nuxt, PostgreSQL",
+          "description": "Recipe manager, integrated with AI Chat over the Model Context Protocol",
+          "to": "https://github.com/Meizuno/RecipesBook"
         },
         {
-          "title": "Tic-Tak-Toe",
-          "technologies": "Python",
-          "description": "Game with GUI on Python with 'pygame' package",
-          "to": "https://github.com/Meizuno/TicTakToe"
-        },
-        {
-          "title": "Online Market",
-          "technologies": "Python, Django",
-          "description": "Web-market on framework Django",
-          "to": "https://github.com/Meizuno/online-market"
+          "title": "Whisper Service",
+          "technologies": "Python, FastAPI",
+          "description": "Self-hosted speech-to-text (faster-whisper) that powers voice input in AI Chat",
+          "to": "https://github.com/Meizuno/WhisperService"
         }
       ]
     }
@@ -164,18 +162,18 @@
       "tag": "Web"
     },
     {
+      "title": "AI Chat",
+      "image": "/images/ai-chat.svg",
+      "description": "LLM chat hub that drives my apps as MCP tools, with voice via self-hosted Whisper",
+      "url": "https://github.com/Meizuno/AIChat",
+      "tag": "GitHub"
+    },
+    {
       "title": "Docket",
       "image": "/images/docket.svg",
       "description": "Pull-based task queue built on FastAPI and Postgres",
       "url": "https://github.com/Meizuno/Docket",
       "tag": "GitHub"
-    },
-    {
-      "title": "OTP Genie",
-      "image": "/images/otp-genie.png",
-      "description": "Generating OTPs and managing 2FA on iOS",
-      "url": "https://apps.apple.com/cz/app/otp-genie/id6748459774",
-      "tag": "IOS"
     }
   ],
   "contacts": [

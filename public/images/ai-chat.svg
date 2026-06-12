@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
+  <defs>
+    <linearGradient id="bubble" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#4338ca"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Chat bubble with tail -->
+  <path d="M 46 30 L 134 30 Q 158 30 158 54 L 158 110 Q 158 134 134 134 L 78 134 L 52 158 L 52 134 L 46 134 Q 22 134 22 110 L 22 54 Q 22 30 46 30 Z" fill="url(#bubble)"/>
+
+  <!-- Typing dots -->
+  <g fill="#fff" fill-opacity="0.9">
+    <circle cx="64" cy="82" r="9"/>
+    <circle cx="90" cy="82" r="9"/>
+    <circle cx="116" cy="82" r="9"/>
+  </g>
+
+  <!-- AI sparkle -->
+  <path d="M 140 28 Q 142 42 156 44 Q 142 46 140 60 Q 138 46 124 44 Q 138 42 140 28 Z" fill="#fff"/>
+</svg>
