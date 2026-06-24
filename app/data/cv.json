@@ -6,7 +6,7 @@
     "companyUrl": "https://www.dlubal.com",
     "image": "/photo.webp"
   },
-  "about": "Full-stack developer and tech lead. I build production backends in Go and Python with Clean Architecture and DDD, reactive Nuxt/Vue frontends in fully-typed TypeScript, and run it all on my own Cloudflare-fronted VPS via Docker and GitHub Actions — including apps wired to LLMs through the Model Context Protocol (MCP).",
+  "about": "Lead developer focused on backend architecture and clean, maintainable code. I build reliable systems end to end. My backends are written in Go and Python, with modern frontends on top. Everything runs on infrastructure I host and manage myself. Recently I have been connecting my apps to LLMs through the Model Context Protocol (MCP).",
   "profile": {
     "location": "Prague, Czechia",
     "timezone": "CET (GMT+1)",
