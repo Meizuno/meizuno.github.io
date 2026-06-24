@@ -10,9 +10,9 @@
         {{ cv.profile.location }}
       </p>
       <p class="text-sm m-0 mb-0.5 text-neutral-900">
-        <template v-for="(c, i) in linkContacts" :key="c.title">
+        <template v-for="(c, i) in linkContacts" :key="c.to">
           <a :href="c.to" class="text-black underline underline-offset-2">{{
-            c.title
+            c.display
           }}</a
           ><span v-if="i < linkContacts.length - 1"> | </span>
         </template>
@@ -162,7 +162,14 @@ useHead({
 const cv = cvData;
 
 const linkContacts = computed(() =>
-  cv.contacts.filter((c) => c.title !== "Profile"),
+  cv.contacts
+    .filter((c) => c.title !== "Profile")
+    // ATS needs the email as visible text, so show the address; GitHub /
+    // LinkedIn keep their short alias label (the link still carries the URL).
+    .map((c) => ({
+      to: c.to,
+      display: c.to.startsWith("mailto:") ? c.to.replace(/^mailto:/, "") : c.title,
+    })),
 );
 
 const flatRoles = computed(() =>
