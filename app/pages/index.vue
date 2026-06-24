@@ -24,7 +24,7 @@
         </div>
       </div>
       <div>
-        <AppApplications :custom-class="'md:grid-cols-2 lg:gap-12'" />
+        <AppApplications :custom-class="'md:grid-cols-2 lg:gap-x-12'" />
       </div>
     </div>
   </div>

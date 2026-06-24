@@ -1,6 +1,6 @@
 <template>
   <AppBlock title="Applications">
-    <div class="grid gap-6" :class="customClass">
+    <div class="grid gap-x-6 gap-y-4" :class="customClass">
       <div v-for="app in apps" :key="app.title">
         <ULink :to="app.url" target="_blank" class="flex gap-4 text-default">
           <NuxtImg

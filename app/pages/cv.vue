@@ -1,6 +1,6 @@
 <template>
   <div
-    class="font-[PT Serif,sans-serif] text-black bg-white max-w-[8.27in] mx-auto py-[0.3in] px-[0.6in] text-[11.5pt] leading-normal flex flex-col min-h-screen relative"
+    class="font-[PT Serif,sans-serif] text-black bg-white max-w-[8.27in] mx-auto py-[0.3in] px-[0.6in] text-[11pt] leading-normal flex flex-col min-h-screen relative"
   >
     <header class="text-center">
       <h1 class="text-[24pt] font-bold m-0 mb-[4pt] leading-[1.15]">
@@ -19,18 +19,18 @@
       </p>
     </header>
 
-    <section class="mt-[10pt]">
+    <section class="mt-[8pt]">
       <h2
-        class="text-lg font-bold uppercase tracking-wider border-b border-black pb-0.5 m-0 mb-2.5"
+        class="text-lg font-bold uppercase tracking-wider border-b border-black pb-0.5 m-0 mb-1.5"
       >
         Summary
       </h2>
       <p class="m-0 mb-[2pt] text-justify">{{ cv.about }}</p>
     </section>
 
-    <section class="mt-[10pt]">
+    <section class="mt-[8pt]">
       <h2
-        class="text-lg font-bold uppercase tracking-wider border-b border-black pb-0.5 m-0 mb-2.5"
+        class="text-lg font-bold uppercase tracking-wider border-b border-black pb-0.5 m-0 mb-1.5"
       >
         Experience
       </h2>
@@ -61,9 +61,9 @@
       </div>
     </section>
 
-    <section class="mt-[10pt]">
+    <section class="mt-[8pt]">
       <h2
-        class="text-lg font-bold uppercase tracking-wider border-b border-black pb-0.5 m-0 mb-2.5"
+        class="text-lg font-bold uppercase tracking-wider border-b border-black pb-0.5 m-0 mb-1.5"
       >
         Education
       </h2>
@@ -95,9 +95,9 @@
       </div>
     </section>
 
-    <section class="mt-[10pt]">
+    <section class="mt-[8pt]">
       <h2
-        class="text-lg font-bold uppercase tracking-wider border-b border-black pb-0.5 m-0 mb-2.5"
+        class="text-lg font-bold uppercase tracking-wider border-b border-black pb-0.5 m-0 mb-1.5"
       >
         Skills
       </h2>
@@ -107,9 +107,9 @@
       </p>
     </section>
 
-    <section class="mt-[10pt]">
+    <section class="mt-[8pt]">
       <h2
-        class="text-lg font-bold uppercase tracking-wider border-b border-black pb-0.5 m-0 mb-2.5"
+        class="text-lg font-bold uppercase tracking-wider border-b border-black pb-0.5 m-0 mb-1.5"
       >
         Projects
       </h2>
@@ -130,9 +130,9 @@
       </ul>
     </section>
 
-    <section class="mt-[10pt]">
+    <section class="mt-[8pt]">
       <h2
-        class="text-lg font-bold uppercase tracking-wider border-b border-black pb-0.5 m-0 mb-2.5"
+        class="text-lg font-bold uppercase tracking-wider border-b border-black pb-0.5 m-0 mb-1.5"
       >
         Languages
       </h2>

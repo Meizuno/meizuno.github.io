@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180" fill="none">
+  <defs>
+    <linearGradient id="shield" x1="0" y1="0" x2="180" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#60a5fa"/>
+      <stop offset="100%" stop-color="#1e3a8a"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Shield -->
+  <path d="M90 28 L150 52 L150 94 Q150 130 90 156 Q30 130 30 94 L30 52 Z" fill="url(#shield)"/>
+
+  <!-- Keyhole -->
+  <g fill="#fff">
+    <circle cx="90" cy="84" r="14"/>
+    <path d="M83 92 L97 92 L101 118 L79 118 Z"/>
+  </g>
+</svg>

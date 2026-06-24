@@ -21,7 +21,10 @@
         { "label": "Python", "to": "https://www.python.org/" },
         { "label": "Go", "to": "https://go.dev/" },
         { "label": "FastAPI", "to": "https://fastapi.tiangolo.com/" },
-        { "label": "Django", "to": "https://www.djangoproject.com/" }
+        { "label": "Django", "to": "https://www.djangoproject.com/" },
+        { "label": "Gin", "to": "https://gin-gonic.com/" },
+        { "label": "Nitro", "to": "https://nitro.build/" },
+        { "label": "Node.js", "to": "https://nodejs.org/" }
       ]
     },
     {
@@ -39,27 +42,40 @@
         { "label": "REST", "to": "https://restfulapi.net/" },
         { "label": "GraphQL", "to": "https://graphql.org/" },
         { "label": "gRPC", "to": "https://grpc.io/" },
-        { "label": "MCP", "to": "https://modelcontextprotocol.io/" }
+        { "label": "MCP", "to": "https://modelcontextprotocol.io/" },
+        { "label": "OpenAI", "to": "https://openai.com/" }
       ]
     },
     {
       "category": "Databases",
       "items": [
         { "label": "PostgreSQL", "to": "https://www.postgresql.org/" },
+        { "label": "Redis", "to": "https://redis.io/" },
         { "label": "SQLite", "to": "https://www.sqlite.org/" },
         { "label": "MongoDB", "to": "https://www.mongodb.com/" },
-        { "label": "Redis", "to": "https://redis.io/" }
+        { "label": "Prisma", "to": "https://www.prisma.io/" },
+        { "label": "SQLAlchemy", "to": "https://www.sqlalchemy.org/" },
+        { "label": "GORM", "to": "https://gorm.io/" }
       ]
     },
     {
       "category": "Cloud & DevOps",
       "items": [
         { "label": "Docker", "to": "https://www.docker.com/" },
-        { "label": "Cloudflare", "to": "https://www.cloudflare.com/" },
+        { "label": "Traefik", "to": "https://traefik.io/" },
         { "label": "Nginx", "to": "https://nginx.org/" },
+        { "label": "Cloudflare", "to": "https://www.cloudflare.com/" },
         { "label": "S3", "to": "https://aws.amazon.com/s3/" },
         { "label": "GitHub Actions", "to": "https://docs.github.com/actions" },
         { "label": "GitLab CI/CD", "to": "https://docs.gitlab.com/ee/ci/" }
+      ]
+    },
+    {
+      "category": "Observability",
+      "items": [
+        { "label": "VictoriaLogs", "to": "https://docs.victoriametrics.com/victorialogs/" },
+        { "label": "Vector", "to": "https://vector.dev/" },
+        { "label": "Uptime Kuma", "to": "https://github.com/louislam/uptime-kuma" }
       ]
     },
     {
@@ -67,14 +83,17 @@
       "items": [
         { "label": "Pytest", "to": "https://docs.pytest.org/" },
         { "label": "Vitest", "to": "https://vitest.dev/" },
+        { "label": "Ruff", "to": "https://docs.astral.sh/ruff/" },
+        { "label": "mypy", "to": "https://mypy-lang.org/" },
+        { "label": "ESLint", "to": "https://eslint.org/" },
         { "label": "Newman", "to": "https://github.com/postmanlabs/newman" }
       ]
     }
   ],
   "languages": [
     { "label": "Ukrainian", "value": 100 },
-    { "label": "English", "value": 70 },
-    { "label": "Czech", "value": 80 }
+    { "label": "English", "value": 80 },
+    { "label": "Czech", "value": 90 }
   ],
   "experiences": [
     {
@@ -155,25 +174,39 @@
       "tag": "GitHub"
     },
     {
-      "title": "Notes",
-      "image": "/images/notes.svg",
-      "description": "Self-hosted notes vault with graph and folder views",
-      "url": "https://notes.meizuno.com/",
-      "tag": "Web"
-    },
-    {
-      "title": "AI Chat",
-      "image": "/images/ai-chat.svg",
-      "description": "LLM chat hub that drives my apps as MCP tools, with voice via self-hosted Whisper",
-      "url": "https://github.com/Meizuno/AIChat",
-      "tag": "GitHub"
-    },
-    {
       "title": "Docket",
       "image": "/images/docket.svg",
       "description": "Pull-based task queue built on FastAPI and Postgres",
       "url": "https://github.com/Meizuno/Docket",
       "tag": "GitHub"
+    },
+    {
+      "title": "Infrastructure",
+      "image": "/images/infrastructure.svg",
+      "description": "Self-hosted stack: Traefik + Cloudflare tunnel, zero-downtime Docker deploys",
+      "url": "https://github.com/Meizuno/Infrastructure",
+      "tag": "GitHub"
+    },
+    {
+      "title": "Authentication",
+      "image": "/images/authentication.svg",
+      "description": "Auth microservice in Go: JWT + refresh rotation and Google OAuth",
+      "url": "https://github.com/Meizuno/Authentication",
+      "tag": "GitHub"
+    },
+    {
+      "title": "AI Chat",
+      "image": "/images/ai-chat.svg",
+      "description": "LLM chat hub that drives my apps as MCP tools",
+      "url": "https://github.com/Meizuno/AIChat",
+      "tag": "GitHub"
+    },
+    {
+      "title": "Notes",
+      "image": "/images/notes.svg",
+      "description": "Self-hosted notes vault with graph and folder views",
+      "url": "https://notes.meizuno.com/",
+      "tag": "Web"
     }
   ],
   "contacts": [
