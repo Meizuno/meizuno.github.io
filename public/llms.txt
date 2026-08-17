@@ -1,0 +1,53 @@
+# Yurii Myronov
+
+> Lead developer focused on backend architecture and clean, maintainable code. I build reliable systems end to end. My backends are written in Go and Python, with modern frontends on top. Everything runs on infrastructure I host and manage myself. Recently I have been connecting my apps to LLMs through the Model Context Protocol (MCP).
+
+- Role: Lead Developer at Dlubal Software (https://www.dlubal.com)
+- Location: Prague, Czechia — CET (GMT+1)
+- Availability: Open to opportunities
+- GitHub: https://github.com/Meizuno
+- Website: https://meizuno.github.io
+
+## Stack
+
+- Backend: Python, Go, FastAPI, Django, Gin, Nitro, Node.js
+- Frontend: TypeScript, Vue, Nuxt, Tailwind CSS
+- API & AI: REST, GraphQL, gRPC, MCP, OpenAI
+- Databases: PostgreSQL, Redis, SQLite, MongoDB, Prisma, SQLAlchemy, GORM
+- Cloud & DevOps: Docker, Traefik, Nginx, Cloudflare, S3, GitHub Actions, GitLab CI/CD
+- Observability: VictoriaLogs, Vector, Uptime Kuma
+- Testing: Pytest, Vitest, Ruff, mypy, ESLint, Newman
+
+## Experience
+
+- Dlubal Software, Prague, Czechia — Lead Programmer (2025–present), Backend Developer (2023–2025)
+
+## Education
+
+- Brno University of Technology — Faculty of Information Technology (2020–2024, incomplete)
+- Kherson National Technical University — Bachelor of Technology - BTech (2017–2021)
+
+## Projects
+
+- [Authentication](https://github.com/Meizuno/Authentication) — Auth microservice with JWT + refresh-token rotation and Google OAuth — the single sign-on all my apps delegate to (Go, Gin, JWT)
+- [Money Manager](https://github.com/Meizuno/MoneyManager) — Personal finance tracker, integrated with AI Chat over the Model Context Protocol (Nuxt, PostgreSQL)
+- [Recipes Book](https://github.com/Meizuno/RecipesBook) — Recipe manager, integrated with AI Chat over the Model Context Protocol (Nuxt, PostgreSQL)
+- [Whisper Service](https://github.com/Meizuno/WhisperService) — Self-hosted speech-to-text (faster-whisper) that powers voice input in AI Chat (Python, FastAPI)
+- [Library](https://github.com/Meizuno/Library) — A Clean Architecture Example in Python
+- [Docket](https://github.com/Meizuno/Docket) — Pull-based task queue built on FastAPI and Postgres
+- [Infrastructure](https://github.com/Meizuno/Infrastructure) — Self-hosted stack: Traefik + Cloudflare tunnel, zero-downtime Docker deploys
+- [AI Chat](https://github.com/Meizuno/AIChat) — LLM chat hub that drives my apps as MCP tools
+- [Notes](https://notes.meizuno.com/) — Self-hosted notes vault with graph and folder views
+
+## Languages
+
+- Ukrainian (native), English (professional), Czech (advanced)
+
+## Contact
+
+- GitHub: https://github.com/Meizuno
+- LinkedIn: https://www.linkedin.com/in/yurii-myronov-694b99249/
+- Email: yuramiron16@gmail.com
+- Profile: https://meizuno.github.io/
+
+_Last updated: 2026-06-24_
